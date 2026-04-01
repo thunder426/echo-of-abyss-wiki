@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heroes &amp; Talents - Echo of Abyss Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Echo of Abyss <span>Wiki</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="cards.html">Cards</a>
+      <a href="heroes.html" class="active">Heroes</a>
+      <a href="relics.html">Relics</a>
+      <a href="encounters.html">Encounters</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h1 class="page-title">Heroes &amp; Talents</h1>
+  <p class="page-subtitle">Playable heroes, their passives, starter decks, and talent trees.</p>
+
+  <!-- LORD VAEL -->
+  <div class="section">
+    <h2 class="section-title">Lord Vael, Void Caller</h2>
+
+    <div class="card-grid">
+      <div class="info-box">
+        <h3>Overview</h3>
+        <p><strong>Faction:</strong> Abyss Order</p>
+        <p><strong>Hero HP:</strong> 30</p>
+        <p style="color:var(--text-muted);font-style:italic;margin-top:12px">&ldquo;The Abyss does not consume &mdash; it remembers.&rdquo;<br>&mdash; Lord Vael, at the Rift Convergence</p>
+      </div>
+      <div class="info-box">
+        <h3>Hero Passives</h3>
+        <ul>
+          <li><strong>Void Imp Boost:</strong> Void Imp Clan minions have +1/+1 ATK and HP.</li>
+          <li><strong>Void Imp Extra Copy:</strong> You may include up to 4 copies of Void Imp in your deck (instead of the normal 2).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="section-subtitle">Starter Deck (12 cards)</h3>
+    <div class="info-box">
+      <table class="data-table" style="margin-bottom:0">
+        <thead>
+          <tr><th>Card</th><th>Type</th><th>Copies</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="col-name">Abyssal Summoning Circle</td><td>Environment</td><td>1</td></tr>
+          <tr><td class="col-name">Dominion Rune</td><td>Rune</td><td>2</td></tr>
+          <tr><td class="col-name">Blood Rune</td><td>Rune</td><td>2</td></tr>
+          <tr><td class="col-name">Void Imp</td><td>Minion</td><td>2</td></tr>
+          <tr><td class="col-name">Shadow Hound</td><td>Minion</td><td>2</td></tr>
+          <tr><td class="col-name">Void Stalker</td><td>Minion</td><td>1</td></tr>
+          <tr><td class="col-name">Void Spawner</td><td>Minion</td><td>1</td></tr>
+          <tr><td class="col-name">Abyssal Brute</td><td>Minion</td><td>1</td></tr>
+          <tr><td class="col-name">Abyssal Sacrifice</td><td>Spell</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="section-subtitle">Hero Reward Pool</h3>
+    <div class="info-box">
+      <p>Cards unlocked as boss drop rewards (added to your collection between runs):</p>
+      <ul>
+        <li>Imp Recruiter (Common)</li>
+        <li>Blood Pact (Common)</li>
+        <li>Soul Taskmaster (Rare)</li>
+        <li>Soul Shatter (Rare)</li>
+        <li>Void Amplifier (Epic)</li>
+        <li>Soul Rune (Epic)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TALENT TREES -->
+  <div class="section">
+    <h2 class="section-title">Talent Trees</h2>
+    <div class="info-box" style="margin-bottom:24px">
+      <p>Talents are unlocked during a run using talent points. You start with <strong>1 talent point</strong>. Each talent requires the previous tier in its branch.</p>
+      <p>Each branch unlocks a unique card pool when you pick its entry talent (Tier 0).</p>
+    </div>
+
+    <!-- ENDLESS TIDE -->
+    <div class="talent-branch">
+      <div class="talent-branch-name">Branch 1: Endless Tide</div>
+      <div class="talent-branch-desc">Overwhelm the board with Void Imps. Unlocks the Endless Tide card pool.</div>
+
+      <div class="talent-node" data-tier="0">
+        <div class="talent-name">Imp Evolution <span style="color:var(--text-muted);font-weight:normal">(Entry)</span></div>
+        <div class="talent-desc">When you summon a Void Imp, add a Senior Void Imp to your hand. Trigger limit: once per turn.</div>
+      </div>
+
+      <div class="talent-node" data-tier="1">
+        <div class="talent-name">Swarm Discipline</div>
+        <div class="talent-desc">Void Imps gain +1 HP.</div>
+      </div>
+
+      <div class="talent-node" data-tier="2">
+        <div class="talent-name">Imp Warband</div>
+        <div class="talent-desc">When you summon a Senior Void Imp, all Void Imps gain +0.5 ATK permanently.</div>
+      </div>
+
+      <div class="talent-node capstone" data-tier="C">
+        <div class="talent-name" style="color:var(--accent-gold)">Void Echo <span style="font-weight:normal">(Capstone)</span></div>
+        <div class="talent-desc">Whenever you draw a Void Imp, add a free copy to your hand.</div>
+      </div>
+    </div>
+
+    <!-- RUNE MASTER -->
+    <div class="talent-branch">
+      <div class="talent-branch-name">Branch 2: Rune Master</div>
+      <div class="talent-branch-desc">Harness the Runes to unleash devastating grand rituals. Unlocks the Rune Master card pool.</div>
+
+      <div class="talent-node" data-tier="0">
+        <div class="talent-name">Rune Caller <span style="color:var(--text-muted);font-weight:normal">(Entry)</span></div>
+        <div class="talent-desc">Playing a Void Imp from hand draws a random Rune from your deck. That Rune costs 1 less Mana this turn.</div>
+      </div>
+
+      <div class="talent-node" data-tier="1">
+        <div class="talent-name">Runic Attunement</div>
+        <div class="talent-desc">All Rune aura effects are doubled (Void Rune: 2 dmg, Blood Rune: 2 heal, Dominion Rune: +2 ATK, Shadow Rune: 2 Corruption).</div>
+      </div>
+
+      <div class="talent-node" data-tier="2">
+        <div class="talent-name">Ritual Surge</div>
+        <div class="talent-desc">When any ritual fires, summon 2 Void Imps.</div>
+      </div>
+
+      <div class="talent-node capstone" data-tier="C">
+        <div class="talent-name" style="color:var(--accent-gold)">Abyss Convergence <span style="font-weight:normal">(Capstone)</span></div>
+        <div class="talent-desc">Grand Ritual: Blood + Dominion + Shadow Runes on board simultaneously triggers <strong>Abyssal Dominion</strong> with no Environment required. Consumes all three Runes. Deals 3 damage to all enemy minions. All friendly Demons permanently gain +2/+2.</div>
+      </div>
+    </div>
+
+    <!-- VOID RESONANCE -->
+    <div class="talent-branch">
+      <div class="talent-branch-name">Branch 3: Void Resonance</div>
+      <div class="talent-branch-desc">Strike with amplified Void energy. Unlocks the Piercing Void card pool.</div>
+
+      <div class="talent-node" data-tier="0">
+        <div class="talent-name">Piercing Void <span style="color:var(--text-muted);font-weight:normal">(Entry)</span></div>
+        <div class="talent-desc">On play, Void Imps deal 2 Void Bolt damage and apply 1 Void Mark. Void Imps cost +1 Mana.</div>
+      </div>
+
+      <div class="talent-node" data-tier="1">
+        <div class="talent-name">Deepened Curse</div>
+        <div class="talent-desc">Void Mark bonus increases from +0.25 to +0.5 damage per stack.</div>
+      </div>
+
+      <div class="talent-node" data-tier="2">
+        <div class="talent-name">Death Bolt</div>
+        <div class="talent-desc">When a Void Imp dies, deal 1 Void Bolt damage to the enemy hero.</div>
+      </div>
+
+      <div class="talent-node capstone" data-tier="C">
+        <div class="talent-name" style="color:var(--accent-gold)">Void Manifestation <span style="font-weight:normal">(Capstone)</span></div>
+        <div class="talent-desc">Void Imps' attacks become Void Bolts targeting the enemy hero, ignoring Guard entirely.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TALENT INTERACTIONS -->
+  <div class="section">
+    <h2 class="section-title">Talent Interaction Notes</h2>
+    <div class="info-box">
+      <ul>
+        <li><strong>Rune Caller</strong> fires only on Void Imps <em>played from hand</em> &mdash; not on tokens from Imp Evolution, Ritual Surge, or other sources.</li>
+        <li><strong>Imp Evolution</strong> fires once per turn even if multiple Void Imps are played.</li>
+        <li><strong>Runic Attunement</strong> doubles the <em>value</em> of each aura, not the number of times it fires.</li>
+        <li><strong>Ritual Surge</strong> imps enter after ritual resolution &mdash; they benefit from permanent stat grants from the ritual.</li>
+        <li><strong>Abyss Convergence</strong> Grand Ritual fires before any 2-rune environment ritual when all 3 runes are present.</li>
+        <li><strong>Void Manifestation</strong> Imp attacks bypass Guard targeting entirely.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Echo of Abyss Wiki &mdash; A roguelike deckbuilder built with Godot 4
+</footer>
+
+</body>
+</html>

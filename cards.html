@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Library - Echo of Abyss Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Echo of Abyss <span>Wiki</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="cards.html" class="active">Cards</a>
+      <a href="heroes.html">Heroes</a>
+      <a href="relics.html">Relics</a>
+      <a href="encounters.html">Encounters</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h1 class="page-title">Card Library</h1>
+  <p class="page-subtitle">All cards in Echo of Abyss &mdash; minions, spells, traps, runes, and environments.</p>
+
+  <input type="text" class="search-box" id="cardSearch" placeholder="Search cards by name, type, or keyword...">
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="minion">Minions</button>
+    <button class="filter-btn" data-filter="spell">Spells</button>
+    <button class="filter-btn" data-filter="trap">Traps</button>
+    <button class="filter-btn" data-filter="rune">Runes</button>
+    <button class="filter-btn" data-filter="environment">Environments</button>
+    <span style="color:var(--text-muted);padding:6px 8px">|</span>
+    <button class="filter-btn" data-pool="abyss_core">Abyss Core</button>
+    <button class="filter-btn" data-pool="neutral_core">Neutral</button>
+    <button class="filter-btn" data-pool="vael_common">Vael Common</button>
+    <button class="filter-btn" data-pool="vael_endless_tide">Endless Tide</button>
+    <button class="filter-btn" data-pool="vael_piercing_void">Piercing Void</button>
+    <button class="filter-btn" data-pool="vael_rune_master">Rune Master</button>
+    <button class="filter-btn" data-pool="enemy">Enemy-Only</button>
+  </div>
+
+  <!-- ======================= ABYSS ORDER CORE ======================= -->
+  <div class="section">
+    <h2 class="section-title">Abyss Order &mdash; Core</h2>
+    <p style="color:var(--text-muted);margin-bottom:16px">Always available. Starter deck draws from this pool.</p>
+
+    <h3 class="section-subtitle">Minions</h3>
+    <div class="card-grid">
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="void imp demon 1">
+        <div class="card-header">
+          <span class="card-name">Void Imp</span>
+          <span class="card-cost cost-essence">1 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1</span>
+          <span class="stat stat-hp">HP 1</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-desc">ON PLAY: Deal 1 damage to the enemy hero.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="senior void imp demon 2">
+        <div class="card-header">
+          <span class="card-name">Senior Void Imp</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 3</span>
+          <span class="stat stat-hp">HP 2.5</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-desc">ON PLAY: Deal 1 damage to the enemy hero.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="runic void imp demon 2 1">
+        <div class="card-header">
+          <span class="card-name">Runic Void Imp</span>
+          <span class="card-cost cost-dual">2E + 1M</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-desc">ON PLAY: Deal 3 damage to a selected enemy minion.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="void imp wizard demon 2 1">
+        <div class="card-header">
+          <span class="card-name">Void Imp Wizard</span>
+          <span class="card-cost cost-dual">2E + 1M</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-desc">ON PLAY: Deal 3 Void Bolt damage to the enemy hero and apply 1 Void Mark.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="nyx'ael void sovereign champion demon 5">
+        <div class="card-header">
+          <span class="card-name champion">Nyx'ael, Void Sovereign</span>
+          <span class="card-cost cost-essence">5 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 5</span>
+          <span class="stat stat-hp">HP 5</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-keywords">
+          <span class="keyword-tag kw-champion">Champion</span>
+        </div>
+        <div class="card-desc">Auto-summoned when 3 Void Imps are on the battlefield. PASSIVE: At the start of your turn, deal 2 damage to all enemy minions.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="shadow hound demon 2">
+        <div class="card-header">
+          <span class="card-name">Shadow Hound</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Demon</div>
+        <div class="card-desc">ON PLAY: Gains +1 ATK for each other Demon on your board.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="abyssal brute demon guard 4">
+        <div class="card-header">
+          <span class="card-name">Abyssal Brute</span>
+          <span class="card-cost cost-essence">4 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 3</span>
+          <span class="stat stat-hp">HP 6</span>
+        </div>
+        <div class="card-type">Demon</div>
+        <div class="card-keywords">
+          <span class="keyword-tag kw-guard">Guard</span>
+        </div>
+        <div class="card-desc">A sturdy Demon that forces enemies to attack it first.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="void stalker demon swift lifedrain 3">
+        <div class="card-header">
+          <span class="card-name">Void Stalker</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 3</span>
+          <span class="stat stat-hp">HP 2</span>
+        </div>
+        <div class="card-type">Demon</div>
+        <div class="card-keywords">
+          <span class="keyword-tag kw-swift">Swift</span>
+          <span class="keyword-tag kw-lifedrain">Lifedrain</span>
+        </div>
+        <div class="card-desc">A fast, aggressive Demon that heals your hero when dealing damage.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="void spawner demon 4">
+        <div class="card-header">
+          <span class="card-name">Void Spawner</span>
+          <span class="card-cost cost-essence">4 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2</span>
+          <span class="stat stat-hp">HP 6</span>
+        </div>
+        <div class="card-type">Demon</div>
+        <div class="card-desc">PASSIVE: Whenever a friendly demon dies, summon a 1/1 Void Spark.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="abyssal tide demon 5">
+        <div class="card-header">
+          <span class="card-name">Abyssal Tide</span>
+          <span class="card-cost cost-essence">5 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 4</span>
+          <span class="stat stat-hp">HP 4</span>
+        </div>
+        <div class="card-type">Demon</div>
+        <div class="card-desc">PASSIVE: Whenever a friendly minion dies, deal 2 damage to the enemy hero.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="void devourer demon guard 6">
+        <div class="card-header">
+          <span class="card-name">Void Devourer</span>
+          <span class="card-cost cost-essence">6 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2</span>
+          <span class="stat stat-hp">HP 6</span>
+        </div>
+        <div class="card-type">Demon</div>
+        <div class="card-keywords">
+          <span class="keyword-tag kw-guard">Guard</span>
+        </div>
+        <div class="card-desc">ON PLAY: Sacrifice adjacent friendly minions. Gains +3/+3 per sacrificed minion.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="abyss cultist human corruption 1">
+        <div class="card-header">
+          <span class="card-name">Abyss Cultist</span>
+          <span class="card-cost cost-essence">1 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Apply 1 Corruption to a random enemy minion.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="void netter human 2">
+        <div class="card-header">
+          <span class="card-name">Void Netter</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Deal 2 damage to a target enemy minion.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="corruption weaver human corruption 3">
+        <div class="card-header">
+          <span class="card-name">Corruption Weaver</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1</span>
+          <span class="stat stat-hp">HP 4</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Apply 1 Corruption to all enemy minions.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="abyss_core" data-search="soul collector human 5">
+        <div class="card-header">
+          <span class="card-name">Soul Collector</span>
+          <span class="card-cost cost-essence">5 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 3</span>
+          <span class="stat stat-hp">HP 7</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Instantly destroy a target Corrupted enemy minion.</div>
+      </div>
+
+    </div>
+
+    <h3 class="section-subtitle">Spells</h3>
+    <div class="card-grid">
+
+      <div class="card" data-type="spell" data-pool="abyss_core" data-search="dark empowerment buff 1">
+        <div class="card-header">
+          <span class="card-name">Dark Empowerment</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Give a friendly minion +1.5 ATK permanently. If it's a Demon, also give it +1.5 HP.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="abyss_core" data-search="abyssal sacrifice draw 2">
+        <div class="card-header">
+          <span class="card-name">Abyssal Sacrifice</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Destroy a friendly minion. Draw 2 cards.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="abyss_core" data-search="abyssal plague corruption aoe 2">
+        <div class="card-header">
+          <span class="card-name">Abyssal Plague</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Apply 1 Corruption to all enemy minions. Deal 1 damage to all enemy minions.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="abyss_core" data-search="void summoning summon demon 2">
+        <div class="card-header">
+          <span class="card-name">Void Summoning</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Summon a 3/3 Demon. If you control any Human, summon a 4/4 Demon instead.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="abyss_core" data-search="void execution damage 3">
+        <div class="card-header">
+          <span class="card-name">Void Execution</span>
+          <span class="card-cost cost-mana">3 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Deal 5 damage to a target enemy. If you control any Human, deal 7 instead.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="abyss_core" data-search="void bolt damage hero 2">
+        <div class="card-header">
+          <span class="card-name">Void Bolt</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Deal 5 Void Bolt damage to the enemy hero. (Scales with Void Marks.)</div>
+      </div>
+
+    </div>
+
+    <h3 class="section-subtitle">Runes</h3>
+    <div class="card-grid">
+
+      <div class="card" data-type="rune" data-pool="abyss_core" data-search="void rune aura 2">
+        <div class="card-header">
+          <span class="card-name">Void Rune</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-rune">Rune</span></div>
+        <div class="card-keywords"><span class="keyword-tag kw-rune">Rune</span></div>
+        <div class="card-desc">AURA: At the start of your turn, deal 1 Void Bolt damage to the enemy hero.</div>
+      </div>
+
+      <div class="card" data-type="rune" data-pool="abyss_core" data-search="blood rune aura heal 2">
+        <div class="card-header">
+          <span class="card-name">Blood Rune</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-rune">Rune</span></div>
+        <div class="card-keywords"><span class="keyword-tag kw-rune">Rune</span></div>
+        <div class="card-desc">AURA: Whenever a friendly minion dies, restore 1 HP to your hero.</div>
+      </div>
+
+      <div class="card" data-type="rune" data-pool="abyss_core" data-search="dominion rune aura demon buff 2">
+        <div class="card-header">
+          <span class="card-name">Dominion Rune</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-rune">Rune</span></div>
+        <div class="card-keywords"><span class="keyword-tag kw-rune">Rune</span></div>
+        <div class="card-desc">AURA: All friendly Demons have +1 ATK.</div>
+      </div>
+
+      <div class="card" data-type="rune" data-pool="abyss_core" data-search="shadow rune aura corruption 2">
+        <div class="card-header">
+          <span class="card-name">Shadow Rune</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-rune">Rune</span></div>
+        <div class="card-keywords"><span class="keyword-tag kw-rune">Rune</span></div>
+        <div class="card-desc">AURA: Enemy minions enter the board with 1 stack of Corruption.</div>
+      </div>
+
+    </div>
+
+    <h3 class="section-subtitle">Environments</h3>
+    <div class="card-grid">
+
+      <div class="card" data-type="environment" data-pool="abyss_core" data-search="dark covenant human demon synergy 2">
+        <div class="card-header">
+          <span class="card-name">Dark Covenant</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-environment">Environment</span></div>
+        <div class="card-desc">While any friendly Human is on board, your Demons have +1 ATK. While any friendly Demon is on board, your Humans restore 1 HP each turn.</div>
+      </div>
+
+      <div class="card" data-type="environment" data-pool="abyss_core" data-search="abyssal summoning circle ritual 2">
+        <div class="card-header">
+          <span class="card-name">Abyssal Summoning Circle</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-environment">Environment</span></div>
+        <div class="card-desc">Whenever a friendly Demon dies, deal 2 damage to the enemy hero. RITUAL (Blood + Dominion): Demon Ascendant &mdash; deal 2 damage to 2 random enemies; summon a 5/5 Demon.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= PIERCING VOID ======================= -->
+  <div class="section">
+    <h2 class="section-title">Abyss Order &mdash; Piercing Void Pool</h2>
+    <p style="color:var(--text-muted);margin-bottom:16px">Requires the Piercing Void talent to appear.</p>
+
+    <div class="card-grid">
+
+      <div class="card" data-type="minion" data-pool="vael_piercing_void" data-search="abyssal arcanist human void bolt 1 2">
+        <div class="card-header">
+          <span class="card-name">Abyssal Arcanist</span>
+          <span class="card-cost cost-dual">1E + 2M</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Add a Void Bolt spell to your hand.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="vael_piercing_void" data-search="void archmagus human legendary 5 5">
+        <div class="card-header">
+          <span class="card-name legendary">Void Archmagus</span>
+          <span class="card-cost cost-dual">5E + 5M</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 4</span>
+          <span class="stat stat-hp">HP 6</span>
+        </div>
+        <div class="card-type">Human &middot; Legendary (Deck limit: 1)</div>
+        <div class="card-desc">Your spells cost 1 less Mana. Whenever you cast a spell, add a Void Bolt to your hand.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_piercing_void" data-search="font of the depths mana grow draw 1">
+        <div class="card-header">
+          <span class="card-name">Font of the Depths</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Permanently gain +1 maximum Mana. Draw a card.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_piercing_void" data-search="mark the target void mark 2">
+        <div class="card-header">
+          <span class="card-name">Mark the Target</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Apply 2 Void Marks to the enemy hero. Draw a card.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_piercing_void" data-search="void detonation damage 4">
+        <div class="card-header">
+          <span class="card-name">Void Detonation</span>
+          <span class="card-cost cost-mana">4 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Deal 5 Void Bolt damage to the enemy hero. Gains +0.5 damage per Void Mark.</div>
+      </div>
+
+      <div class="card" data-type="environment" data-pool="vael_piercing_void" data-search="abyss ritual circle 2">
+        <div class="card-header">
+          <span class="card-name">Abyss Ritual Circle</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-environment">Environment</span></div>
+        <div class="card-desc">Each turn, deal 1 damage to a random minion (both sides). RITUAL (Void + Blood): Soul Cataclysm &mdash; 4 Void Bolt to enemy hero; 4 HP healing to you.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= ENDLESS TIDE ======================= -->
+  <div class="section">
+    <h2 class="section-title">Abyss Order &mdash; Endless Tide Pool</h2>
+    <p style="color:var(--text-muted);margin-bottom:16px">Requires the Imp Evolution talent. Void Imp swarm synergy.</p>
+
+    <div class="card-grid">
+
+      <div class="card" data-type="minion" data-pool="vael_endless_tide" data-search="imp martyr demon void imp death 2">
+        <div class="card-header">
+          <span class="card-name">Imp Martyr</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1</span>
+          <span class="stat stat-hp">HP 2</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-desc">ON DEATH: Give all friendly Void Imps +1/+1 permanently.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="vael_endless_tide" data-search="imp vessel demon void imp summon 3">
+        <div class="card-header">
+          <span class="card-name">Imp Vessel</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1</span>
+          <span class="stat stat-hp">HP 2</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-desc">ON DEATH: Summon 2 Void Imps.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="vael_endless_tide" data-search="imp idol demon deathless 5">
+        <div class="card-header">
+          <span class="card-name">Imp Idol</span>
+          <span class="card-cost cost-essence">5 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 3</span>
+          <span class="stat stat-hp">HP 6</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-desc">ON PLAY: Give all friendly Void Imps Deathless.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="vael_endless_tide" data-search="vael's colossal guard demon guard 7">
+        <div class="card-header">
+          <span class="card-name champion">Vael's Colossal Guard</span>
+          <span class="card-cost cost-essence">7 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 3</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Demon &middot; Void Imp Clan</div>
+        <div class="card-keywords">
+          <span class="keyword-tag kw-guard">Guard</span>
+        </div>
+        <div class="card-desc">ON PLAY: Gain +3/+3 for each other Void Imp on board. Give all other Void Imps +1 ATK permanently.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_endless_tide" data-search="imp frenzy buff 1">
+        <div class="card-header">
+          <span class="card-name">Imp Frenzy</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Give a friendly Void Imp +3 ATK.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= RUNE MASTER ======================= -->
+  <div class="section">
+    <h2 class="section-title">Abyss Order &mdash; Rune Master Pool</h2>
+    <p style="color:var(--text-muted);margin-bottom:16px">Requires the Rune Caller talent. Rune and ritual synergy.</p>
+
+    <div class="card-grid">
+
+      <div class="card" data-type="minion" data-pool="vael_rune_master" data-search="rune warden human 3">
+        <div class="card-header">
+          <span class="card-name">Rune Warden</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2</span>
+          <span class="stat stat-hp">HP 4</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">PASSIVE: Whenever you place a Rune, this minion gains +2 ATK until end of turn.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="vael_rune_master" data-search="rune seeker human 3">
+        <div class="card-header">
+          <span class="card-name">Rune Seeker</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 1.5</span>
+          <span class="stat stat-hp">HP 4</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Search your deck for a Rune and add it to your hand.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_rune_master" data-search="runic blast damage aoe 2">
+        <div class="card-header">
+          <span class="card-name">Runic Blast</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Deal 2 damage to 2 random enemy minions. If you have 2+ Runes, deal 2 to ALL enemy minions instead.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_rune_master" data-search="runic echo copy 2">
+        <div class="card-header">
+          <span class="card-name">Runic Echo</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Add a copy of each Rune on the battlefield to your hand.</div>
+      </div>
+
+      <div class="card" data-type="rune" data-pool="vael_rune_master" data-search="echo rune wildcard legendary 2">
+        <div class="card-header">
+          <span class="card-name legendary">Echo Rune</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-rune">Rune</span> &middot; Wildcard &middot; Legendary</div>
+        <div class="card-keywords"><span class="keyword-tag kw-rune">Rune</span></div>
+        <div class="card-desc">AURA: At the start of your turn, fire the effect of the last Rune you placed. Counts as any rune type for rituals.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= VAEL COMMON ======================= -->
+  <div class="section">
+    <h2 class="section-title">Abyss Order &mdash; Vael Common Pool</h2>
+    <p style="color:var(--text-muted);margin-bottom:16px">Unlocked as boss drop rewards for Lord Vael.</p>
+
+    <div class="card-grid">
+
+      <div class="card" data-type="minion" data-pool="vael_common" data-search="imp recruiter human void imp 2">
+        <div class="card-header">
+          <span class="card-name">Imp Recruiter</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2</span>
+          <span class="stat stat-hp">HP 3</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Add a Void Imp to your hand.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="vael_common" data-search="soul taskmaster demon 3">
+        <div class="card-header">
+          <span class="card-name">Soul Taskmaster</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2.5</span>
+          <span class="stat stat-hp">HP 4</span>
+        </div>
+        <div class="card-type">Demon</div>
+        <div class="card-desc">PASSIVE: Whenever a friendly Demon dies, this minion permanently gains +0.5 ATK.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="vael_common" data-search="void amplifier human demon buff 4">
+        <div class="card-header">
+          <span class="card-name">Void Amplifier</span>
+          <span class="card-cost cost-essence">4 Essence</span>
+        </div>
+        <div class="card-stats">
+          <span class="stat stat-atk">ATK 2.5</span>
+          <span class="stat stat-hp">HP 3.5</span>
+        </div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">PASSIVE: Whenever you play a Demon, it enters with +1/+1.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_common" data-search="blood pact sacrifice demon buff 2">
+        <div class="card-header">
+          <span class="card-name">Blood Pact</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Sacrifice a friendly Human. All friendly Demons permanently gain +2 ATK and +1 HP.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="vael_common" data-search="soul shatter sacrifice aoe 3">
+        <div class="card-header">
+          <span class="card-name">Soul Shatter</span>
+          <span class="card-cost cost-mana">3 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Sacrifice a friendly Demon. Deal 2 damage to all enemy minions. Deal 3 if the sacrifice had 3+ HP.</div>
+      </div>
+
+      <div class="card" data-type="rune" data-pool="vael_common" data-search="soul rune demon death summon 2">
+        <div class="card-header">
+          <span class="card-name">Soul Rune</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-rune">Rune</span></div>
+        <div class="card-keywords"><span class="keyword-tag kw-rune">Rune</span></div>
+        <div class="card-desc">AURA: Whenever a friendly Demon dies during the enemy's turn, summon a 1/1 Void Spark. Triggers once per turn.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= NEUTRAL ======================= -->
+  <div class="section">
+    <h2 class="section-title">Neutral &mdash; Core</h2>
+    <p style="color:var(--text-muted);margin-bottom:16px">Available to all heroes. No faction synergy.</p>
+
+    <h3 class="section-subtitle">Minions</h3>
+    <div class="card-grid">
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="roadside drifter human 1">
+        <div class="card-header">
+          <span class="card-name">Roadside Drifter</span>
+          <span class="card-cost cost-essence">1 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 1</span><span class="stat stat-hp">HP 3</span></div>
+        <div class="card-type">Human</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="ashland forager beast 1">
+        <div class="card-header">
+          <span class="card-name">Ashland Forager</span>
+          <span class="card-cost cost-essence">1 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 2</span><span class="stat stat-hp">HP 2</span></div>
+        <div class="card-type">Beast</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="freelance sellsword mercenary 2">
+        <div class="card-header">
+          <span class="card-name">Freelance Sellsword</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 3</span><span class="stat stat-hp">HP 2</span></div>
+        <div class="card-type">Mercenary</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="traveling merchant human draw 2">
+        <div class="card-header">
+          <span class="card-name">Traveling Merchant</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 1</span><span class="stat stat-hp">HP 1</span></div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Draw a card.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="trapbreaker rogue human 2">
+        <div class="card-header">
+          <span class="card-name">Trapbreaker Rogue</span>
+          <span class="card-cost cost-essence">2 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 2.5</span><span class="stat stat-hp">HP 2</span></div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Destroy a random enemy trap.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="caravan guard mercenary 3">
+        <div class="card-header">
+          <span class="card-name">Caravan Guard</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 3.5</span><span class="stat stat-hp">HP 3.5</span></div>
+        <div class="card-type">Mercenary</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="arena challenger mercenary 3">
+        <div class="card-header">
+          <span class="card-name">Arena Challenger</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 4.5</span><span class="stat stat-hp">HP 2</span></div>
+        <div class="card-type">Mercenary</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="spell taxer human 3">
+        <div class="card-header">
+          <span class="card-name">Spell Taxer</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 2.5</span><span class="stat stat-hp">HP 3</span></div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Enemy spells cost +1 Mana next turn.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="saboteur adept human 3">
+        <div class="card-header">
+          <span class="card-name">Saboteur Adept</span>
+          <span class="card-cost cost-essence">3 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 3</span><span class="stat stat-hp">HP 3</span></div>
+        <div class="card-type">Human</div>
+        <div class="card-desc">ON PLAY: Enemy traps cannot trigger this turn.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="aether bulwark construct shield 3 2">
+        <div class="card-header">
+          <span class="card-name">Aether Bulwark</span>
+          <span class="card-cost cost-dual">3E + 2M</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 3</span><span class="stat stat-hp">HP 4</span><span class="stat stat-shield">Shield 3</span></div>
+        <div class="card-type">Construct</div>
+        <div class="card-keywords"><span class="keyword-tag kw-shield">Shield Regen I</span></div>
+        <div class="card-desc">Magic Shield regenerates 1 at the start of your turn.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="bulwark automaton construct deathless 4">
+        <div class="card-header">
+          <span class="card-name">Bulwark Automaton</span>
+          <span class="card-cost cost-essence">4 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 3</span><span class="stat stat-hp">HP 5</span></div>
+        <div class="card-type">Construct</div>
+        <div class="card-keywords"><span class="keyword-tag kw-deathless">Deathless</span></div>
+        <div class="card-desc">Survives the first instance of fatal damage (HP set to 0.5).</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="wandering warden mercenary shield 4 1">
+        <div class="card-header">
+          <span class="card-name">Wandering Warden</span>
+          <span class="card-cost cost-dual">4E + 1M</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 3</span><span class="stat stat-hp">HP 4</span><span class="stat stat-shield">Shield 3</span></div>
+        <div class="card-type">Mercenary</div>
+        <div class="card-keywords"><span class="keyword-tag kw-shield">Shield Regen I</span></div>
+        <div class="card-desc">Magic Shield regenerates 1 at the start of your turn.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="ruins archivist mercenary draw 5">
+        <div class="card-header">
+          <span class="card-name">Ruins Archivist</span>
+          <span class="card-cost cost-essence">5 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 4.5</span><span class="stat stat-hp">HP 5</span></div>
+        <div class="card-type">Mercenary</div>
+        <div class="card-desc">ON PLAY: Draw a card.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="wildland behemoth beast 6">
+        <div class="card-header">
+          <span class="card-name">Wildland Behemoth</span>
+          <span class="card-cost cost-essence">6 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 7</span><span class="stat stat-hp">HP 6</span></div>
+        <div class="card-type">Beast</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="stone sentinel mercenary 7">
+        <div class="card-header">
+          <span class="card-name">Stone Sentinel</span>
+          <span class="card-cost cost-essence">7 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 9</span><span class="stat stat-hp">HP 6</span></div>
+        <div class="card-type">Mercenary</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="neutral_core" data-search="rift leviathan beast 8">
+        <div class="card-header">
+          <span class="card-name">Rift Leviathan</span>
+          <span class="card-cost cost-essence">8 Essence</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 10</span><span class="stat stat-hp">HP 7</span></div>
+        <div class="card-type">Beast</div>
+      </div>
+
+    </div>
+
+    <h3 class="section-subtitle">Spells</h3>
+    <div class="card-grid">
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="energy conversion resource 0">
+        <div class="card-header">
+          <span class="card-name">Energy Conversion</span>
+          <span class="card-cost cost-mana">0 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Convert up to 3 remaining Essence into Mana.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="flux siphon resource 0">
+        <div class="card-header">
+          <span class="card-name">Flux Siphon</span>
+          <span class="card-cost cost-mana">0 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Convert up to 3 remaining Mana into Essence.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="arcane strike damage 1">
+        <div class="card-header">
+          <span class="card-name">Arcane Strike</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Deal 3 damage to a target minion.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="purge remove buffs debuffs 1">
+        <div class="card-header">
+          <span class="card-name">Purge</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Remove all runtime effects from a target minion.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="cyclone destroy trap environment 1">
+        <div class="card-header">
+          <span class="card-name">Cyclone</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Destroy a target active Trap or the active Environment.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="tactical planning draw 1">
+        <div class="card-header">
+          <span class="card-name">Tactical Planning</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Draw a card.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="precision strike damage 3">
+        <div class="card-header">
+          <span class="card-name">Precision Strike</span>
+          <span class="card-cost cost-mana">3 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Deal 6 damage to a target minion.</div>
+      </div>
+
+      <div class="card" data-type="spell" data-pool="neutral_core" data-search="hurricane destroy all traps environment 3">
+        <div class="card-header">
+          <span class="card-name">Hurricane</span>
+          <span class="card-cost cost-mana">3 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-spell">Spell</span></div>
+        <div class="card-desc">Destroy all Traps and the active Environment on the battlefield, including your own.</div>
+      </div>
+
+    </div>
+
+    <h3 class="section-subtitle">Traps</h3>
+    <div class="card-grid">
+
+      <div class="card" data-type="trap" data-pool="neutral_core" data-search="hidden ambush damage attack 1">
+        <div class="card-header">
+          <span class="card-name">Hidden Ambush</span>
+          <span class="card-cost cost-mana">1 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-trap">Trap</span> &middot; Trigger: Enemy Attack</div>
+        <div class="card-desc">When an enemy minion attacks, deal 4 damage to that minion.</div>
+      </div>
+
+      <div class="card" data-type="trap" data-pool="neutral_core" data-search="smoke veil cancel exhaust attack 2">
+        <div class="card-header">
+          <span class="card-name">Smoke Veil</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-trap">Trap</span> &middot; Trigger: Enemy Attack</div>
+        <div class="card-desc">When an enemy minion attacks, cancel that attack and exhaust all enemy minions.</div>
+      </div>
+
+      <div class="card" data-type="trap" data-pool="neutral_core" data-search="silence trap cancel spell 2">
+        <div class="card-header">
+          <span class="card-name">Silence Trap</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-trap">Trap</span> &middot; Trigger: Enemy Spell</div>
+        <div class="card-desc">When the enemy casts a spell, cancel that spell entirely.</div>
+      </div>
+
+      <div class="card" data-type="trap" data-pool="neutral_core" data-search="death trap destroy summon 2">
+        <div class="card-header">
+          <span class="card-name">Death Trap</span>
+          <span class="card-cost cost-mana">2 Mana</span>
+        </div>
+        <div class="card-type"><span class="badge badge-trap">Trap</span> &middot; Trigger: Enemy Summon</div>
+        <div class="card-desc">When the enemy summons a minion, destroy that minion immediately.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= TOKENS ======================= -->
+  <div class="section">
+    <h2 class="section-title">Tokens</h2>
+    <p style="color:var(--text-muted);margin-bottom:16px">Summoned by card effects. Not in any player deck.</p>
+
+    <div class="card-grid">
+      <div class="card" data-type="minion" data-pool="token" data-search="void spark spirit token 0">
+        <div class="card-header">
+          <span class="card-name">Void Spark</span>
+          <span class="card-cost" style="color:var(--text-muted)">Token</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 1</span><span class="stat stat-hp">HP 1</span></div>
+        <div class="card-type">Spirit &middot; Token</div>
+        <div class="card-desc">Summoned by Void Spawner, Brood Imp, Soul Rune, and various effects.</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="token" data-search="void demon demon token 0">
+        <div class="card-header">
+          <span class="card-name">Void Demon</span>
+          <span class="card-cost" style="color:var(--text-muted)">Token</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 2</span><span class="stat stat-hp">HP 2</span></div>
+        <div class="card-type">Demon &middot; Token</div>
+        <div class="card-desc">Summoned by Void Summoning. Stats overridden at summon time (3/3 or 4/4 with Human synergy).</div>
+      </div>
+
+      <div class="card" data-type="minion" data-pool="token" data-search="guardian spirit guard token 0">
+        <div class="card-header">
+          <span class="card-name">Guardian Spirit</span>
+          <span class="card-cost" style="color:var(--text-muted)">Token</span>
+        </div>
+        <div class="card-stats"><span class="stat stat-atk">ATK 3</span><span class="stat stat-hp">HP 3</span></div>
+        <div class="card-type">Spirit &middot; Token</div>
+        <div class="card-keywords"><span class="keyword-tag kw-guard">Guard</span></div>
+        <div class="card-desc">Summoned by Soul Anchor relic.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Echo of Abyss Wiki &mdash; A roguelike deckbuilder built with Godot 4
+</footer>
+
+<script>
+// Search
+document.getElementById('cardSearch').addEventListener('input', function() {
+  const q = this.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c => {
+    const text = (c.textContent + ' ' + (c.dataset.search || '')).toLowerCase();
+    c.style.display = text.includes(q) ? '' : 'none';
+  });
+});
+
+// Type filter
+document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const f = this.dataset.filter;
+    document.querySelectorAll('.card').forEach(c => {
+      c.style.display = (f === 'all' || c.dataset.type === f) ? '' : 'none';
+    });
+  });
+});
+
+// Pool filter
+document.querySelectorAll('.filter-btn[data-pool]').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const isActive = this.classList.contains('active');
+    document.querySelectorAll('.filter-btn[data-pool]').forEach(b => b.classList.remove('active'));
+    if (isActive) {
+      document.querySelectorAll('.card').forEach(c => c.style.display = '');
+      document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+      document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+    } else {
+      this.classList.add('active');
+      const p = this.dataset.pool;
+      document.querySelectorAll('.card').forEach(c => {
+        if (p === 'enemy') {
+          c.style.display = ['feral_imp_clan','abyss_cultist_clan','void_rift'].includes(c.dataset.pool) ? '' : 'none';
+        } else {
+          c.style.display = c.dataset.pool === p ? '' : 'none';
+        }
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

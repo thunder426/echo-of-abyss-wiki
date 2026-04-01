@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relics - Echo of Abyss Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Echo of Abyss <span>Wiki</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="cards.html">Cards</a>
+      <a href="heroes.html">Heroes</a>
+      <a href="relics.html" class="active">Relics</a>
+      <a href="encounters.html">Encounters</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h1 class="page-title">Relics</h1>
+  <p class="page-subtitle">Activated abilities with limited charges and cooldowns. Persist across a run; charges reset each combat.</p>
+
+  <!-- RULES -->
+  <div class="section">
+    <h2 class="section-title">Relic Rules</h2>
+    <div class="card-grid">
+      <div class="info-box">
+        <h3>Activation</h3>
+        <ul>
+          <li><strong>1 relic activation per turn</strong> &mdash; cannot fire multiple relics in the same turn</li>
+          <li><strong>Cooldown</strong> = turns before available (first available turn = cooldown + 1)</li>
+          <li>After each use, the relic goes on cooldown again for the same duration</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>Acquisition</h3>
+        <ul>
+          <li><strong>Act 1 boss:</strong> Choose 1 of 2 random relics from the Act 1 pool</li>
+          <li><strong>Act 2+ bosses:</strong> Choose 1 of 2 random relics from that act's pool, <em>or</em> +1 charge to a random existing relic</li>
+          <li>Charges reset at the start of each new combat</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACT 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="badge badge-act1">Act 1</span> Utility &amp; Resource</h2>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Scout's Lantern</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 3 turns</div>
+        <div class="relic-desc">Draw 2 cards.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Imp Talisman</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 3 turns</div>
+        <div class="relic-desc">Add a Void Imp to your hand.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Mana Shard</div>
+        <div class="relic-meta">Charges: 2 &middot; Cooldown: 2 turns</div>
+        <div class="relic-desc">Gain +2 Mana this turn (cannot exceed max).</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Bone Shield</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 5 turns</div>
+        <div class="relic-desc">Your hero takes no damage until your next turn.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACT 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="badge badge-act2">Act 2</span> Tempo &amp; Removal</h2>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Void Lens</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 4 turns</div>
+        <div class="relic-desc">Cast Abyssal Plague for free: apply 1 Corruption to all enemy minions and deal 1 damage to all enemies.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Soul Anchor</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 4 turns</div>
+        <div class="relic-desc">Summon a 3/3 Spirit with Guard.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Dark Mirror</div>
+        <div class="relic-meta">Charges: 2 &middot; Cooldown: 2 turns</div>
+        <div class="relic-desc">Reduce the cost of your next card by 2.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Blood Chalice</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 3 turns</div>
+        <div class="relic-desc">Deal 5 damage to a target enemy minion.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACT 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="badge badge-act3">Act 3</span> Powerful &amp; Game-Swinging</h2>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Void Hourglass</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 5 turns</div>
+        <div class="relic-desc">Take an extra turn after this one.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Oblivion Seal</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 5 turns</div>
+        <div class="relic-desc">Summon a 5/5 Void Demon with Lifedrain.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Nether Crown</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 4 turns</div>
+        <div class="relic-desc">All friendly minions gain +2 ATK this turn.</div>
+      </div>
+    </div>
+
+    <div class="relic-card">
+      <div class="relic-info">
+        <div class="relic-name">Phantom Deck</div>
+        <div class="relic-meta">Charges: 1 &middot; Cooldown: 4 turns</div>
+        <div class="relic-desc">Add a copy of your 3 highest-cost cards to your hand.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARISON TABLE -->
+  <div class="section">
+    <h2 class="section-title">Quick Reference</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Act</th><th>Relic</th><th>Charges</th><th>CD</th><th>Effect</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td class="col-name">Scout's Lantern</td><td>1</td><td>3</td><td>Draw 2 cards</td></tr>
+        <tr><td>1</td><td class="col-name">Imp Talisman</td><td>1</td><td>3</td><td>Add Void Imp to hand</td></tr>
+        <tr><td>1</td><td class="col-name">Mana Shard</td><td>2</td><td>2</td><td>+2 Mana this turn</td></tr>
+        <tr><td>1</td><td class="col-name">Bone Shield</td><td>1</td><td>5</td><td>Hero immunity until next turn</td></tr>
+        <tr><td>2</td><td class="col-name">Void Lens</td><td>1</td><td>4</td><td>Free Abyssal Plague</td></tr>
+        <tr><td>2</td><td class="col-name">Soul Anchor</td><td>1</td><td>4</td><td>Summon 3/3 Guard Spirit</td></tr>
+        <tr><td>2</td><td class="col-name">Dark Mirror</td><td>2</td><td>2</td><td>Next card costs 2 less</td></tr>
+        <tr><td>2</td><td class="col-name">Blood Chalice</td><td>1</td><td>3</td><td>5 damage to enemy minion</td></tr>
+        <tr><td>3</td><td class="col-name">Void Hourglass</td><td>1</td><td>5</td><td>Extra turn</td></tr>
+        <tr><td>3</td><td class="col-name">Oblivion Seal</td><td>1</td><td>5</td><td>Summon 5/5 Lifedrain Demon</td></tr>
+        <tr><td>3</td><td class="col-name">Nether Crown</td><td>1</td><td>4</td><td>All friendlies +2 ATK this turn</td></tr>
+        <tr><td>3</td><td class="col-name">Phantom Deck</td><td>1</td><td>4</td><td>Copy 3 highest-cost cards to hand</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Echo of Abyss Wiki &mdash; A roguelike deckbuilder built with Godot 4
+</footer>
+
+</body>
+</html>

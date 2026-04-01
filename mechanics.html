@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Mechanics - Echo of Abyss Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Echo of Abyss <span>Wiki</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html" class="active">Mechanics</a>
+      <a href="cards.html">Cards</a>
+      <a href="heroes.html">Heroes</a>
+      <a href="relics.html">Relics</a>
+      <a href="encounters.html">Encounters</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h1 class="page-title">Game Mechanics</h1>
+  <p class="page-subtitle">Everything you need to know about how Echo of Abyss works.</p>
+
+  <!-- RESOURCES -->
+  <div class="section" id="resources">
+    <h2 class="section-title">Resources</h2>
+
+    <div class="card-grid">
+      <div class="info-box">
+        <h3><span style="color:var(--accent-essence)">Essence</span></h3>
+        <ul>
+          <li>Spent to summon <strong>minions</strong></li>
+          <li>Refills to <code>essence_max</code> each turn</li>
+          <li>Starting max: <strong>1</strong></li>
+          <li>Grows by 1 when you choose &ldquo;grow Essence&rdquo; at end of turn</li>
+          <li>Hard cap: <strong>10</strong></li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3><span style="color:var(--accent-mana)">Mana</span></h3>
+        <ul>
+          <li>Spent on <strong>spells, traps, runes, and environments</strong></li>
+          <li>Refills to <code>mana_max</code> each turn</li>
+          <li>Starting max: <strong>1</strong></li>
+          <li>Grows by 1 when you choose &ldquo;grow Mana&rdquo; at end of turn</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top:16px">
+      <h3>Combined Resource Cap</h3>
+      <p><code>essence_max + mana_max &le; 11</code></p>
+      <p>At the end of each turn, you choose to grow either Essence or Mana by 1 (not both). You cannot exceed a combined total of 11.</p>
+      <br>
+      <p><strong>Conversion spells</strong> let you move resources between pools:</p>
+      <ul>
+        <li><strong>Energy Conversion</strong> (0 Mana): Convert up to 3 remaining Essence &rarr; Mana</li>
+        <li><strong>Flux Siphon</strong> (0 Mana): Convert up to 3 remaining Mana &rarr; Essence</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CARD TYPES -->
+  <div class="section" id="card-types">
+    <h2 class="section-title">Card Types</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Type</th><th>Cost</th><th>Behavior</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-name"><span class="badge badge-minion">Minion</span></td>
+          <td>Essence (some + Mana)</td>
+          <td>Placed on board (5 slots). Has ATK/HP. Destroyed at 0 HP. Can attack each turn.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="badge badge-spell">Spell</span></td>
+          <td>Mana</td>
+          <td>Resolved immediately, then goes to discard pile.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="badge badge-trap">Trap</span></td>
+          <td>Mana</td>
+          <td>Placed face-down. Triggers automatically on a specific enemy action. One-use (consumed on trigger).</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="badge badge-rune">Rune</span></td>
+          <td>Mana</td>
+          <td>Trap subtype. Placed face-up. Persistent passive aura &mdash; never consumed by triggering. Ritual component.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="badge badge-environment">Environment</span></td>
+          <td>Mana</td>
+          <td>Only one active at a time. Replaced when a new one is played. Provides a persistent passive aura.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info-box">
+      <h3>Dual-Cost Minions</h3>
+      <p>Some minions require both Essence <em>and</em> Mana (e.g., Runic Void Imp costs 2 Essence + 1 Mana). Both pools must have sufficient resources to play the card.</p>
+    </div>
+  </div>
+
+  <!-- BOARD -->
+  <div class="section" id="board">
+    <h2 class="section-title">Board Layout</h2>
+    <div class="info-box">
+      <ul>
+        <li><strong>5 minion slots per side</strong> (player and enemy)</li>
+        <li>Minions occupy one slot each; a full board cannot accept new minions</li>
+        <li>Slots retain their index for adjacency effects (e.g., Void Devourer sacrifices adjacent minions)</li>
+        <li><strong>Max 3 trap/rune slots</strong> shared between traps and runes</li>
+        <li><strong>1 environment slot</strong> per side</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HAND & DECK -->
+  <div class="section" id="hand-deck">
+    <h2 class="section-title">Hand &amp; Deck</h2>
+    <div class="info-box">
+      <ul>
+        <li><strong>Max hand size:</strong> 10 cards &mdash; cards drawn beyond 10 are burned/discarded</li>
+        <li><strong>Opening hand:</strong> 3 cards</li>
+        <li>When deck is empty, discard pile reshuffles back in</li>
+        <li>Draw 1 card at the start of each turn</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- KEYWORDS -->
+  <div class="section" id="keywords">
+    <h2 class="section-title">Keywords &amp; Abilities</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Keyword</th><th>Effect</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-guard">Guard</span></td>
+          <td>Enemy must attack this minion first if any Guard minion exists on the board. Applies to both minion and hero attacks.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-swift">Swift</span></td>
+          <td>Can attack enemy <em>minions</em> on the turn it is summoned. Cannot attack the enemy hero that turn. Transitions to NORMAL state next turn.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-lifedrain">Lifedrain</span></td>
+          <td>Damage dealt to the enemy hero also heals your hero by the same amount.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-deathless">Deathless</span></td>
+          <td>Prevents the next instance of fatal damage. When triggered, HP is set to 50 and the keyword is consumed.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-shield">Shield Regen I</span></td>
+          <td>Regenerates 100 shield at the start of the owner's turn (clamped to shield cap).</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-shield">Shield Regen II</span></td>
+          <td>Regenerates 200 shield at the start of the owner's turn (clamped to shield cap).</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-champion">Champion</span></td>
+          <td>Legendary unit. Auto-summoned for free when a specified board condition is met (e.g., 3 Void Imps on board). Max 1 copy in deck. Gold name.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-corruption">Corruption</span></td>
+          <td>Stacking debuff: each stack reduces ATK by 100. Applied by spells, minion effects, or Shadow Rune.</td>
+        </tr>
+        <tr>
+          <td class="col-name"><span class="keyword-tag kw-rune">Rune</span></td>
+          <td>Persistent face-up trap with a passive aura. Never auto-consumed. Can serve as a ritual component.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- COMBAT -->
+  <div class="section" id="combat">
+    <h2 class="section-title">Combat Mechanics</h2>
+
+    <h3 class="section-subtitle">Minion vs. Minion</h3>
+    <div class="info-box">
+      <ol>
+        <li>Both minions deal damage to each other <strong>simultaneously</strong></li>
+        <li><strong>Shield absorbs first:</strong> <code>shield_absorbed = min(damage, current_shield)</code>, then <code>HP -= (damage - shield_absorbed)</code></li>
+        <li>If HP &le; 0: minion is destroyed, ON DEATH effects fire</li>
+        <li>If attacker has <strong>Lifedrain</strong>: heals hero by attacker's effective ATK</li>
+        <li>Attacker transitions to EXHAUSTED state</li>
+      </ol>
+    </div>
+
+    <h3 class="section-subtitle">Minion vs. Hero</h3>
+    <div class="info-box">
+      <ol>
+        <li>Damage = attacker's effective ATK</li>
+        <li>Hero HP reduced directly (heroes have no shield)</li>
+        <li>If attacker has <strong>Lifedrain</strong>: heals hero by same amount</li>
+      </ol>
+    </div>
+
+    <h3 class="section-subtitle">Guard Enforcement</h3>
+    <div class="info-box">
+      <p>If the opponent has &ge; 1 Guard minion, the attacker <strong>must</strong> target a Guard minion. Cannot target the hero or non-Guard minions while Guard exists.</p>
+      <p><strong>Exception:</strong> Void Manifestation talent &mdash; Void Imp attacks become Void Bolts that ignore Guard entirely.</p>
+    </div>
+
+    <h3 class="section-subtitle">Effective ATK</h3>
+    <div class="info-box">
+      <p><code>effective_atk = current_atk + ATK_BONUS + TEMP_ATK - CORRUPTION_PENALTY</code></p>
+      <p>Minimum 0. A minion with 0 effective ATK <strong>cannot attack</strong>.</p>
+    </div>
+
+    <h3 class="section-subtitle">Minion States</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>State</th><th>Can Attack Minion</th><th>Can Attack Hero</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="col-name">NORMAL</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td class="col-name">SWIFT</td><td>Yes</td><td>No</td></tr>
+        <tr><td class="col-name">EXHAUSTED</td><td>No</td><td>No</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TURN STRUCTURE -->
+  <div class="section" id="turns">
+    <h2 class="section-title">Turn Structure</h2>
+
+    <h3 class="section-subtitle">Player Turn</h3>
+    <div class="info-box">
+      <ol>
+        <li><strong>Turn Start Phase</strong>
+          <ul>
+            <li>Increment turn number</li>
+            <li>Refill Essence and Mana to their maximums</li>
+            <li>Draw 1 card (burn if hand is full)</li>
+            <li>Unexhaust all friendly minions (EXHAUSTED/SWIFT &rarr; NORMAL)</li>
+            <li>Expire temporary buffs</li>
+            <li>Regenerate shields (Shield Regen keywords)</li>
+            <li>Fire ON_PLAYER_TURN_START triggers (environment passives, rune auras, etc.)</li>
+          </ul>
+        </li>
+        <li><strong>Action Phase</strong> &mdash; Play cards and attack with minions in any order. No limit on actions per turn.</li>
+        <li><strong>End Turn</strong> &mdash; Choose to grow Essence or Mana by 1 (if below combined cap of 11). Control passes to enemy.</li>
+      </ol>
+    </div>
+
+    <h3 class="section-subtitle">Enemy Turn</h3>
+    <div class="info-box">
+      <ol>
+        <li><strong>Turn Start</strong> &mdash; Enemy draws 2 cards, grows resources, refills, unexhausts, expires temp buffs, regenerates shields</li>
+        <li><strong>AI Play Phase</strong> &mdash; Enemy plays cards using encounter-specific AI profiles</li>
+        <li><strong>AI Attack Phase</strong> &mdash; Enemy minions attack with smart targeting</li>
+        <li><strong>End Enemy Turn</strong> &mdash; Control returns to player</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- BUFF SYSTEM -->
+  <div class="section" id="buffs">
+    <h2 class="section-title">Buff System</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Buff Type</th><th>Effect</th><th>Duration</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="col-name">ATK_BONUS</td><td>Flat ATK increase</td><td>Permanent</td></tr>
+        <tr><td class="col-name">HP_BONUS</td><td>Flat max HP increase</td><td>Permanent</td></tr>
+        <tr><td class="col-name">TEMP_ATK</td><td>ATK boost for one turn</td><td>Cleared at turn start</td></tr>
+        <tr><td class="col-name">SHIELD_BONUS</td><td>Increases shield cap</td><td>Permanent</td></tr>
+        <tr><td class="col-name">GRANT_GUARD</td><td>Gives Guard at runtime</td><td>Until dispelled</td></tr>
+        <tr><td class="col-name">GRANT_LIFEDRAIN</td><td>Gives Lifedrain at runtime</td><td>Until dispelled</td></tr>
+        <tr><td class="col-name">GRANT_DEATHLESS</td><td>Gives Deathless at runtime</td><td>Consumed on fatal damage</td></tr>
+        <tr><td class="col-name">CORRUPTION</td><td>Stacking debuff: &minus;100 ATK per stack</td><td>Until cleansed</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-subtitle">Buff Operations</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Operation</th><th>Behavior</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="col-name">Dispel</td><td>Removes all buffs <em>except</em> Corruption</td></tr>
+        <tr><td class="col-name">Cleanse</td><td>Removes all Corruption stacks only</td></tr>
+        <tr><td class="col-name">Purge</td><td>Removes all runtime effects from a target</td></tr>
+        <tr><td class="col-name">Expire Temp</td><td>Clears all temporary buffs at turn start</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TRAP & RUNE SYSTEM -->
+  <div class="section" id="traps-runes">
+    <h2 class="section-title">Trap &amp; Rune System</h2>
+
+    <div class="info-box">
+      <h3>Trap Slots</h3>
+      <p><strong>Max 3 active traps/runes simultaneously</strong> (shared pool). Both traps and runes occupy slots from this pool.</p>
+    </div>
+
+    <div class="card-grid" style="margin-top:16px">
+      <div class="info-box">
+        <h3>Normal Traps</h3>
+        <ul>
+          <li>Placed <strong>face-down</strong> (hidden from opponent)</li>
+          <li>Trigger automatically when their event fires during enemy turn</li>
+          <li>Consumed (removed) on trigger by default</li>
+          <li>Destroyed by trap removal effects</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>Runes</h3>
+        <ul>
+          <li>Placed <strong>face-up</strong> (always visible)</li>
+          <li>Persistent passive aura &mdash; never auto-consumed</li>
+          <li>Count as <strong>ritual components</strong></li>
+          <li>Destroyed by trap removal effects</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="section-subtitle">Rune Auras</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Rune</th><th>Aura Effect</th><th>Base Value</th><th>With Runic Attunement</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="col-name" style="color:#8b5cf6">Void Rune</td><td>Start of your turn: Void Bolt damage to enemy hero</td><td>100</td><td>200</td></tr>
+        <tr><td class="col-name" style="color:#dc2626">Blood Rune</td><td>When a friendly minion dies: restore HP to your hero</td><td>100</td><td>200</td></tr>
+        <tr><td class="col-name" style="color:#3b82f6">Dominion Rune</td><td>All friendly Demons have +ATK (board-wide aura)</td><td>+100</td><td>+200</td></tr>
+        <tr><td class="col-name" style="color:#9ca3af">Shadow Rune</td><td>Enemy minions enter with Corruption stacks</td><td>1 stack</td><td>2 stacks</td></tr>
+        <tr><td class="col-name" style="color:#c084fc">Soul Rune</td><td>When friendly Demon dies during enemy turn: summon Void Spark</td><td>1 token</td><td>1 token</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RITUAL SYSTEM -->
+  <div class="section" id="rituals">
+    <h2 class="section-title">Ritual System</h2>
+
+    <div class="info-box">
+      <p>A Ritual is a powerful one-time effect that fires automatically when specific rune conditions are met alongside an active Environment card.</p>
+      <br>
+      <h3>Trigger Timing</h3>
+      <ul>
+        <li>When a <strong>rune is placed</strong> &mdash; checks if current runes satisfy any environment ritual</li>
+        <li>When an <strong>environment is placed</strong> &mdash; checks if runes already on board satisfy its rituals</li>
+        <li>Order of play does not matter</li>
+      </ul>
+      <br>
+      <h3>Resolution</h3>
+      <ol>
+        <li>Check for valid <strong>3-rune Grand Ritual</strong> first (requires Abyss Convergence talent)</li>
+        <li>Check for valid <strong>2-rune rituals</strong> defined by the active environment</li>
+        <li>If valid: <strong>consume the required runes</strong>, then execute the ritual effect</li>
+        <li>The environment remains active after the ritual fires</li>
+      </ol>
+    </div>
+
+    <h3 class="section-subtitle">2-Rune Rituals</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Environment</th><th>Required Runes</th><th>Ritual Name</th><th>Effect</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-name">Abyssal Summoning Circle</td>
+          <td><span style="color:#dc2626">Blood</span> + <span style="color:#3b82f6">Dominion</span></td>
+          <td>Demon Ascendant</td>
+          <td>200 damage to 2 random enemies. Summon a 500/500 Demon.</td>
+        </tr>
+        <tr>
+          <td class="col-name">Abyss Ritual Circle</td>
+          <td><span style="color:#8b5cf6">Void</span> + <span style="color:#dc2626">Blood</span></td>
+          <td>Soul Cataclysm</td>
+          <td>400 Void Bolt to enemy hero. 400 HP healing to you.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-subtitle">Grand Ritual (Abyss Convergence Talent)</h3>
+    <div class="info-box">
+      <p><strong>Abyssal Dominion</strong> &mdash; Requires: <span style="color:#dc2626">Blood</span> + <span style="color:#3b82f6">Dominion</span> + <span style="color:#9ca3af">Shadow</span> Runes (no Environment required)</p>
+      <p>Effect: 300 damage to all enemy minions. All friendly Demons permanently gain +200 ATK and +200 HP.</p>
+      <p><em>Consumes all three runes on trigger.</em></p>
+    </div>
+  </div>
+
+  <!-- VOID BOLT SYSTEM -->
+  <div class="section" id="void-bolt">
+    <h2 class="section-title">Void Marks &amp; Void Bolt</h2>
+
+    <div class="card-grid">
+      <div class="info-box">
+        <h3>Void Marks</h3>
+        <ul>
+          <li>Accumulated on the enemy hero during combat</li>
+          <li>Persist across turns within a single combat</li>
+          <li>Scale Void Bolt damage</li>
+        </ul>
+        <br>
+        <h3>Mark Sources</h3>
+        <ul>
+          <li><strong>Piercing Void talent:</strong> +1 when Void Imp plays from hand</li>
+          <li><strong>Void Bolt spell (with talent):</strong> +1</li>
+          <li><strong>Void Imp Wizard:</strong> +1 on play</li>
+          <li><strong>Mark the Target:</strong> +2 directly</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>Void Bolt Damage</h3>
+        <p><code>total = base_damage + (void_marks &times; bonus_per_mark)</code></p>
+        <br>
+        <table class="data-table" style="margin-bottom:0">
+          <tr><td>Base bonus per mark</td><td><strong>25</strong></td></tr>
+          <tr><td>With Deepened Curse</td><td><strong>50</strong> per mark</td></tr>
+        </table>
+        <br>
+        <p>Any effect labeled &ldquo;Void Bolt damage&rdquo; scales with marks. Regular damage does not.</p>
+        <br>
+        <p><strong>Void Manifestation:</strong> Void Imp attacks become Void Bolts &mdash; uses Void Bolt formula instead of physical ATK and ignores Guard.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WIN/LOSS -->
+  <div class="section" id="win-loss">
+    <h2 class="section-title">Win &amp; Loss Conditions</h2>
+    <div class="card-grid">
+      <div class="info-box">
+        <h3 style="color:var(--accent-green)">Victory</h3>
+        <p>Enemy hero HP &le; 0. Run advances; card/relic rewards offered. If final boss (Fight 15): permanent unlock cards offered.</p>
+      </div>
+      <div class="info-box">
+        <h3 style="color:var(--accent-blood)">Defeat</h3>
+        <p>Player hero HP &le; 0. Run ends; return to main menu with option to retry.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Echo of Abyss Wiki &mdash; A roguelike deckbuilder built with Godot 4
+</footer>
+
+</body>
+</html>
