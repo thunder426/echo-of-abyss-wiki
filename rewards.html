@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rewards &amp; Shop - Echo of Abyss Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Echo of Abyss <span>Wiki</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="cards.html">Cards</a>
+      <a href="heroes.html">Heroes</a>
+      <a href="relics.html">Relics</a>
+      <a href="encounters.html">Encounters</a>
+      <a href="rewards.html" class="active">Rewards</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h1 class="page-title">Rewards, Shop &amp; Card Pools</h1>
+  <p class="page-subtitle">How you earn cards, relics, and void shards throughout a run.</p>
+
+  <!-- CARD POOLS OVERVIEW -->
+  <div class="section" id="card-pools">
+    <h2 class="section-title">Card Pools</h2>
+
+    <div class="info-box" style="margin-bottom:16px">
+      <p>There is <strong>no permanent unlock mechanism</strong> for support pool cards. Your available card pools are determined entirely by your <strong>hero choice</strong> and <strong>talent selection</strong> during the current run.</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="info-box">
+        <h3>Core Pools (Always Available)</h3>
+        <p>Every hero has access to two core pools from the start:</p>
+        <ul>
+          <li><strong>Faction Core</strong> &mdash; Hero's faction cards (e.g., Abyss Order core for Lord Vael)</li>
+          <li><strong>Neutral Core</strong> &mdash; Faction-neutral cards available to all heroes</li>
+        </ul>
+        <p style="color:var(--text-muted);margin-top:8px">Core pool cards can appear in normal fight rewards and shop.</p>
+      </div>
+      <div class="info-box">
+        <h3>Support Pools (Hero + Talent)</h3>
+        <p>Determined by your hero and chosen talents:</p>
+        <ul>
+          <li><strong>Hero Common Pool</strong> &mdash; Always available for that hero (e.g., Vael Common for Lord Vael)</li>
+          <li><strong>Talent Branch Pool</strong> &mdash; Unlocked when you pick the entry talent of a branch</li>
+        </ul>
+        <p style="color:var(--text-muted);margin-top:8px">Support pool cards appear in boss rewards and are guaranteed in shop.</p>
+      </div>
+    </div>
+
+    <h3 class="section-subtitle">Lord Vael's Support Pools</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Pool</th><th>Unlocked By</th><th>Cards</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-name">Vael Common</td>
+          <td>Always (Lord Vael)</td>
+          <td>Imp Recruiter, Blood Pact, Soul Taskmaster, Soul Shatter, Void Amplifier, Soul Rune</td>
+        </tr>
+        <tr>
+          <td class="col-name">Piercing Void</td>
+          <td>Piercing Void talent</td>
+          <td>Abyssal Arcanist, Font of the Depths, Mark the Target, Void Detonation, Abyss Ritual Circle, Void Archmagus</td>
+        </tr>
+        <tr>
+          <td class="col-name">Endless Tide</td>
+          <td>Imp Evolution talent</td>
+          <td>Imp Frenzy, Imp Martyr, Imp Vessel, Imp Idol, Vael's Colossal Guard</td>
+        </tr>
+        <tr>
+          <td class="col-name">Rune Master</td>
+          <td>Rune Caller talent</td>
+          <td>Runic Blast, Rune Seeker, Rune Warden, Runic Echo, Echo Rune</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ACT GATING -->
+  <div class="section" id="act-gating">
+    <h2 class="section-title">Act Gating</h2>
+
+    <div class="info-box" style="margin-bottom:16px">
+      <p>Support pool cards are <strong>gated by act</strong>. A card's act gate determines when it becomes available as a reward or in the shop:</p>
+      <ul>
+        <li><strong>Act Gate 1:</strong> Available from the start of the run</li>
+        <li><strong>Act Gate 2:</strong> Available after defeating the Act 1 boss (Fight 3)</li>
+        <li><strong>Act Gate 3:</strong> Available after defeating the Act 2 boss (Fight 6)</li>
+        <li><strong>Act Gate 4:</strong> Available after defeating the Act 3 boss (Fight 9)</li>
+      </ul>
+    </div>
+
+    <h3 class="section-subtitle">Vael Common Pool</h3>
+    <table class="data-table">
+      <thead><tr><th>Card</th><th>Type</th><th>Act Gate</th></tr></thead>
+      <tbody>
+        <tr><td class="col-name">Imp Recruiter</td><td>Minion</td><td><span class="badge badge-act1">Act 1</span></td></tr>
+        <tr><td class="col-name">Blood Pact</td><td>Spell</td><td><span class="badge badge-act1">Act 1</span></td></tr>
+        <tr><td class="col-name">Soul Taskmaster</td><td>Minion</td><td><span class="badge badge-act2">Act 2</span></td></tr>
+        <tr><td class="col-name">Soul Shatter</td><td>Spell</td><td><span class="badge badge-act2">Act 2</span></td></tr>
+        <tr><td class="col-name">Void Amplifier</td><td>Minion</td><td><span class="badge badge-act3">Act 3</span></td></tr>
+        <tr><td class="col-name">Soul Rune</td><td>Rune</td><td><span class="badge badge-act3">Act 3</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-subtitle">Piercing Void Pool</h3>
+    <table class="data-table">
+      <thead><tr><th>Card</th><th>Type</th><th>Act Gate</th></tr></thead>
+      <tbody>
+        <tr><td class="col-name">Font of the Depths</td><td>Spell</td><td><span class="badge badge-act1">Act 1</span></td></tr>
+        <tr><td class="col-name">Abyssal Arcanist</td><td>Minion</td><td><span class="badge badge-act1">Act 1</span></td></tr>
+        <tr><td class="col-name">Mark the Target</td><td>Spell</td><td><span class="badge badge-act2">Act 2</span></td></tr>
+        <tr><td class="col-name">Void Detonation</td><td>Spell</td><td><span class="badge badge-act2">Act 2</span></td></tr>
+        <tr><td class="col-name">Abyss Ritual Circle</td><td>Environment</td><td><span class="badge badge-act3">Act 3</span></td></tr>
+        <tr><td class="col-name">Void Archmagus</td><td>Minion</td><td>Act 4</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-subtitle">Endless Tide Pool</h3>
+    <table class="data-table">
+      <thead><tr><th>Card</th><th>Type</th><th>Act Gate</th></tr></thead>
+      <tbody>
+        <tr><td class="col-name">Imp Frenzy</td><td>Spell</td><td><span class="badge badge-act1">Act 1</span></td></tr>
+        <tr><td class="col-name">Imp Martyr</td><td>Minion</td><td><span class="badge badge-act2">Act 2</span></td></tr>
+        <tr><td class="col-name">Imp Vessel</td><td>Minion</td><td><span class="badge badge-act2">Act 2</span></td></tr>
+        <tr><td class="col-name">Imp Idol</td><td>Minion</td><td><span class="badge badge-act3">Act 3</span></td></tr>
+        <tr><td class="col-name">Vael's Colossal Guard</td><td>Minion</td><td>Act 4</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-subtitle">Rune Master Pool</h3>
+    <table class="data-table">
+      <thead><tr><th>Card</th><th>Type</th><th>Act Gate</th></tr></thead>
+      <tbody>
+        <tr><td class="col-name">Runic Blast</td><td>Spell</td><td><span class="badge badge-act1">Act 1</span></td></tr>
+        <tr><td class="col-name">Rune Seeker</td><td>Minion</td><td><span class="badge badge-act1">Act 1</span></td></tr>
+        <tr><td class="col-name">Rune Warden</td><td>Minion</td><td><span class="badge badge-act2">Act 2</span></td></tr>
+        <tr><td class="col-name">Runic Echo</td><td>Spell</td><td><span class="badge badge-act3">Act 3</span></td></tr>
+        <tr><td class="col-name">Echo Rune</td><td>Rune</td><td>Act 4</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SPECIAL UNLOCK -->
+  <div class="section" id="special-unlock">
+    <h2 class="section-title">Special Unlock</h2>
+    <div class="info-box" style="border-color:var(--accent-gold)">
+      <h3 style="color:var(--accent-gold)">Nyx'ael, Void Sovereign</h3>
+      <p><strong>Unlock condition:</strong> Clear all 4 acts as Lord Vael (defeat the Abyss Sovereign in Fight 15).</p>
+      <p>Once unlocked, Nyx'ael can be included in your starting deck on future runs. This is the only card with a cross-run permanent unlock.</p>
+    </div>
+  </div>
+
+  <!-- FIGHT REWARDS -->
+  <div class="section" id="fight-rewards">
+    <h2 class="section-title">Fight Rewards</h2>
+
+    <div class="card-grid">
+      <div class="info-box">
+        <h3>Normal Fight Reward</h3>
+        <ul>
+          <li>Win a normal fight &rarr; choose <strong>1 card from 3 options</strong></li>
+          <li>The 3 cards are randomly drafted from all available pools:
+            <ul>
+              <li>Faction core (Abyss Order)</li>
+              <li>Neutral core</li>
+              <li>Unlocked support pools (hero common + talent branch)</li>
+            </ul>
+          </li>
+          <li><strong>Deck limit:</strong> max 2 copies per card &mdash; if a drafted card would exceed this, it's discarded and another is drawn</li>
+          <li><strong>Champions:</strong> max 1 copy</li>
+          <li>Also earns <strong>1 Void Shard</strong></li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>Boss Fight Reward</h3>
+        <ul>
+          <li>Win a boss fight &rarr; choose <strong>1 card from 3 options</strong></li>
+          <li>The 3 cards are <strong>always drafted from support pools only</strong> (hero common + talent branch)</li>
+          <li>Same deck limit rules apply</li>
+          <li>Also earns <strong>3 Void Shards</strong></li>
+          <li>After card reward: <strong>relic selection</strong> (see below)</li>
+          <li>After relic: <strong>+1 talent point</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELIC REWARDS -->
+  <div class="section" id="relic-rewards">
+    <h2 class="section-title">Relic Rewards</h2>
+
+    <div class="info-box">
+      <p>After each boss fight, you choose a relic:</p>
+      <ul>
+        <li><strong>Act 1 Boss:</strong> Choose 1 of 2 relics from the Act 1 relic pool (4 options total, 2 offered)</li>
+        <li><strong>Act 2+ Bosses:</strong> Choose 1 of 2 relics from that act's pool, <strong>or</strong> add +1 charge to a random existing relic you own</li>
+      </ul>
+      <p style="margin-top:8px">Relic options are <strong>unique per act</strong> &mdash; see the <a href="relics.html">Relics page</a> for the full list per act.</p>
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th>Boss</th><th>Relic Pool</th><th>Upgrade Option</th></tr></thead>
+      <tbody>
+        <tr><td class="col-name">Act 1 &mdash; Imp Matriarch</td><td>Scout's Lantern, Imp Talisman, Mana Shard, Bone Shield</td><td>No</td></tr>
+        <tr><td class="col-name">Act 2 &mdash; Corrupted Handler</td><td>Void Lens, Soul Anchor, Dark Mirror, Blood Chalice</td><td>+1 charge to existing relic</td></tr>
+        <tr><td class="col-name">Act 3 &mdash; Void Herald</td><td>Void Hourglass, Oblivion Seal, Nether Crown, Phantom Deck</td><td>+1 charge to existing relic</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- VOID SHARDS -->
+  <div class="section" id="void-shards">
+    <h2 class="section-title">Void Shards</h2>
+
+    <div class="info-box" style="margin-bottom:16px">
+      <p>Void Shards are the in-run currency used to purchase cards and services at the shop.</p>
+    </div>
+
+    <h3 class="section-subtitle">Earning Void Shards</h3>
+    <table class="data-table">
+      <thead><tr><th>Source</th><th>Amount</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td class="col-name">Normal fight win</td><td>1</td><td>After each non-boss encounter</td></tr>
+        <tr><td class="col-name">Boss fight win</td><td>3</td><td>After defeating an act boss</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-subtitle">Void Shard Economy per Run</h3>
+    <div class="info-box">
+      <p>Across a full 15-fight run:</p>
+      <ul>
+        <li><strong>Act 1:</strong> 2 normal fights (2 shards) + 1 boss (3 shards) = <strong>5 shards</strong></li>
+        <li><strong>Act 2:</strong> 2 normal fights (2 shards) + 1 boss (3 shards) = <strong>5 shards</strong></li>
+        <li><strong>Act 3:</strong> 2 normal fights (2 shards) + 1 boss (3 shards) = <strong>5 shards</strong></li>
+        <li><strong>Act 4:</strong> 5 normal fights (5 shards) + 1 boss (3 shards) = <strong>8 shards</strong></li>
+        <li><strong>Maximum total: 23 shards</strong></li>
+      </ul>
+    </div>
+
+    <h3 class="section-subtitle">Spending Void Shards</h3>
+    <table class="data-table">
+      <thead><tr><th>Purchase</th><th>Cost</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="col-name">Standard card (shop)</td><td>2</td><td>Any non-champion card</td></tr>
+        <tr><td class="col-name">Champion card (shop)</td><td>4</td><td>Max 1 copy; not offered in first shop</td></tr>
+        <tr><td class="col-name">HP Restoration</td><td>1</td><td>Restore 500 HP</td></tr>
+        <tr><td class="col-name">Refresh Shop</td><td>1</td><td>Reroll all card and service slots</td></tr>
+        <tr><td class="col-name">Random Card</td><td>1</td><td>Add a random card from any pool</td></tr>
+        <tr><td class="col-name">Card Removal</td><td>3</td><td>Remove one card from your deck permanently</td></tr>
+        <tr><td class="col-name">Max HP Increase</td><td>4</td><td>+300 max HP and current HP</td></tr>
+        <tr><td class="col-name">Expand Core Unit</td><td>3</td><td>+1 Void Imp copy limit; adds 1 Void Imp to deck</td></tr>
+        <tr><td class="col-name">Core Unit Variant</td><td>4</td><td>Add a talent-specific Void Imp variant to deck</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SHOP -->
+  <div class="section" id="shop">
+    <h2 class="section-title">Shop</h2>
+
+    <div class="info-box" style="margin-bottom:16px">
+      <p>The shop appears <strong>before each boss fight</strong>. It offers 4 cards and 2 services, all purchasable with Void Shards.</p>
+    </div>
+
+    <h3 class="section-subtitle">Card Slots (4 cards)</h3>
+    <div class="info-box">
+      <ul>
+        <li><strong>2 slots guaranteed from support pool</strong> (active talent branch + hero common pool)</li>
+        <li><strong>2 slots from full pool</strong> (core sets + any unlocked support pools)</li>
+        <li>Standard cards cost <strong>2 shards</strong>; Champion cards cost <strong>4 shards</strong></li>
+        <li>Champions are not offered in the first shop</li>
+        <li>Cards you already have 2 copies of (or 1 for Champions) are not offered</li>
+      </ul>
+    </div>
+
+    <h3 class="section-subtitle">Service Slots (2 services)</h3>
+    <div class="info-box" style="margin-bottom:16px">
+      <p>2 random services are offered from the eligible pool. Selection is uniform random (no weighting). Some services are only available after the first shop.</p>
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th>Service</th><th>Cost</th><th>Effect</th><th>First Shop?</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="col-name">HP Restoration</td>
+          <td>1 shard</td>
+          <td>Restore 500 HP to your hero.</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td class="col-name">Refresh Shop</td>
+          <td>1 shard</td>
+          <td>Reroll all card and service slots with new options.</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td class="col-name">Random Card</td>
+          <td>1 shard</td>
+          <td>Add a random card from any available pool to your deck.</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td class="col-name">Card Removal</td>
+          <td>3 shards</td>
+          <td>Remove one card from your deck permanently.</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td class="col-name">Max HP Increase</td>
+          <td>4 shards</td>
+          <td>Gain +300 max HP and +300 current HP.</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td class="col-name">Expand Core Unit</td>
+          <td>3 shards</td>
+          <td>Increase Void Imp deck limit by 1 and add a Void Imp to your deck.</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td class="col-name">Core Unit Variant</td>
+          <td>4 shards</td>
+          <td>Add a talent-specific Void Imp variant (Senior, Runic, or Wizard) to your deck.</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DECK LIMITS -->
+  <div class="section" id="deck-limits">
+    <h2 class="section-title">Deck Limits</h2>
+    <div class="info-box">
+      <table class="data-table" style="margin-bottom:0">
+        <thead><tr><th>Rule</th><th>Limit</th></tr></thead>
+        <tbody>
+          <tr><td class="col-name">Deck size</td><td>15 cards</td></tr>
+          <tr><td class="col-name">Card copy limit</td><td>2 copies of any non-champion card</td></tr>
+          <tr><td class="col-name">Champion limit</td><td>1 copy</td></tr>
+          <tr><td class="col-name">Void Imp limit</td><td>4 copies (default), expandable via shop service</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RUN FLOW SUMMARY -->
+  <div class="section" id="run-flow">
+    <h2 class="section-title">Run Flow Summary</h2>
+    <div class="info-box">
+      <table class="data-table" style="margin-bottom:0">
+        <thead><tr><th>Event</th><th>Rewards</th></tr></thead>
+        <tbody>
+          <tr><td class="col-name">Normal fight win</td><td>+1 Void Shard, choose 1 of 3 cards (all pools)</td></tr>
+          <tr><td class="col-name">Boss fight win</td><td>+3 Void Shards, choose 1 of 3 cards (support pool only), choose 1 of 2 relics, +1 talent point</td></tr>
+          <tr><td class="col-name">Before boss fight</td><td>Shop opens (4 cards + 2 services)</td></tr>
+          <tr><td class="col-name">Clear all 4 acts (Lord Vael)</td><td>Permanently unlock Nyx'ael, Void Sovereign</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Echo of Abyss Wiki &mdash; A roguelike deckbuilder built with Godot 4
+</footer>
+
+</body>
+</html>
