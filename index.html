@@ -10,104 +10,21 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="site-logo">Echo of Abyss <span>Wiki</span></a>
-    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="mechanics.html">Mechanics</a>
-      <a href="cards.html">Cards</a>
-      <a href="heroes.html">Heroes</a>
-      <a href="relics.html">Relics</a>
-      <a href="encounters.html">Encounters</a>
-      <a href="rewards.html">Rewards</a>
+    <a href="#home" class="site-logo" data-nav data-page="home">Echo of Abyss <span>Wiki</span></a>
+    <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+    <nav id="main-nav">
+      <a href="#home" data-nav data-page="home">Home</a>
+      <a href="#mechanics" data-nav data-page="mechanics">Mechanics</a>
+      <a href="#cards" data-nav data-page="cards">Cards</a>
+      <a href="#heroes" data-nav data-page="heroes">Heroes</a>
+      <a href="#relics" data-nav data-page="relics">Relics</a>
+      <a href="#encounters" data-nav data-page="encounters">Encounters</a>
+      <a href="#rewards" data-nav data-page="rewards">Rewards</a>
     </nav>
   </div>
 </header>
 
-<div class="hero-banner">
-  <h1>Echo of Abyss</h1>
-  <p class="subtitle">A single-player roguelike deckbuilder. Command the forces of the Abyss Order, summon demons, weave runes, and conquer the void.</p>
-</div>
-
-<div class="container">
-
-  <div class="section">
-    <h2 class="section-title">About the Game</h2>
-    <div class="info-box">
-      <p>Echo of Abyss is a single-player roguelike deckbuilder where you take the role of a hero fighting through 15 increasingly difficult encounters across 4 acts. Between fights, you earn new cards, relics, and talents to build an ever-more-powerful deck.</p>
-      <br>
-      <p><strong>Core Loop:</strong> Start a run with a starter deck &rarr; Fight encounters &rarr; Earn rewards (cards, relics, talent points) &rarr; Grow your resources &rarr; Defeat the final boss to unlock permanent reward cards.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Quick Reference</h2>
-    <div class="home-grid">
-      <a href="mechanics.html" class="home-link">
-        <h3>Game Mechanics</h3>
-        <p>Resources, combat rules, turn structure, keywords, buffs, and the ritual system.</p>
-      </a>
-      <a href="cards.html" class="home-link">
-        <h3>Card Library</h3>
-        <p>Browse all minions, spells, traps, runes, and environments with full stats and effects.</p>
-      </a>
-      <a href="heroes.html" class="home-link">
-        <h3>Heroes &amp; Talents</h3>
-        <p>Hero passives, starter decks, and the three talent branches: Endless Tide, Rune Master, Void Resonance.</p>
-      </a>
-      <a href="relics.html" class="home-link">
-        <h3>Relics</h3>
-        <p>Activated abilities across three acts &mdash; from utility tools to game-swinging powers.</p>
-      </a>
-      <a href="encounters.html" class="home-link">
-        <h3>Encounters</h3>
-        <p>All 15 fights across 4 acts, enemy decks, AI profiles, and boss strategies.</p>
-      </a>
-      <a href="rewards.html" class="home-link">
-        <h3>Rewards &amp; Shop</h3>
-        <p>Card pools, act gating, fight rewards, void shards, shop services, and deck limits.</p>
-      </a>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Key Pillars</h2>
-    <div class="card-grid">
-      <div class="info-box">
-        <h3>Tactical Board Play</h3>
-        <p>5 minion slots per side. Place minions, cast spells, set traps, and deploy environments. Every board position matters.</p>
-      </div>
-      <div class="info-box">
-        <h3>Dual-Resource System</h3>
-        <p><strong style="color:var(--accent-essence)">Essence</strong> summons minions. <strong style="color:var(--accent-mana)">Mana</strong> fuels spells, traps, and runes. Grow one each turn &mdash; combined cap of 11.</p>
-      </div>
-      <div class="info-box">
-        <h3>Deep Synergy</h3>
-        <p>Void Imp swarms, Corruption debuffs, Rune auras, Ritual combos, and Void Bolt scaling create layered strategies.</p>
-      </div>
-      <div class="info-box">
-        <h3>Roguelike Progression</h3>
-        <p>Each run offers different card rewards, relic choices, and talent paths. Permanent unlocks carry across runs.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Act Structure</h2>
-    <table class="data-table">
-      <thead>
-        <tr><th>Act</th><th>Name</th><th>Fights</th><th>Boss</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td class="col-name">The Imp Lair</td><td>Fights 1&ndash;3</td><td>Imp Matriarch</td></tr>
-        <tr><td>2</td><td class="col-name">The Abyss Dungeon</td><td>Fights 4&ndash;6</td><td>Corrupted Handler</td></tr>
-        <tr><td>3</td><td class="col-name">The Void Rift</td><td>Fights 7&ndash;9</td><td>Void Herald</td></tr>
-        <tr><td>4</td><td class="col-name">The Final Descent</td><td>Fights 10&ndash;15</td><td>Abyss Sovereign</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-</div>
+<div id="content"></div>
 
 <footer class="site-footer">
   Echo of Abyss Wiki &mdash; A roguelike deckbuilder built with Godot 4
@@ -115,22 +32,7 @@
 
 <audio id="bg-music" src="assets/audio/main_screen.mp3" loop></audio>
 <button class="music-toggle" id="music-toggle" title="Toggle music">&#9835;</button>
-<script>
-(function(){
-  var a=document.getElementById('bg-music'),b=document.getElementById('music-toggle');
-  var muted=localStorage.getItem('eoa-wiki-muted')==='true';
-  a.volume=0.3;
-  a.currentTime=parseFloat(localStorage.getItem('eoa-wiki-time'))||0;
-  function upd(){b.textContent=muted?'\u266C\u2009\u2715':'\u266B';b.title=muted?'Play music':'Mute music';}
-  upd();
-  setInterval(function(){if(!a.paused)localStorage.setItem('eoa-wiki-time',a.currentTime);},500);
-  window.addEventListener('beforeunload',function(){if(!a.paused)localStorage.setItem('eoa-wiki-time',a.currentTime);});
-  function resume(){a.currentTime=parseFloat(localStorage.getItem('eoa-wiki-time'))||0;return a.play();}
-  if(!muted){resume().catch(function(){
-    document.addEventListener('click',function f(){resume();document.removeEventListener('click',f);},{once:true});
-  });}
-  b.addEventListener('click',function(){muted=!muted;localStorage.setItem('eoa-wiki-muted',muted);if(muted)a.pause();else resume();upd();});
-})();
-</script>
+
+<script src="common.js"></script>
 </body>
 </html>
