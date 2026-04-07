@@ -592,12 +592,16 @@
   var a=document.getElementById('bg-music'),b=document.getElementById('music-toggle');
   var muted=localStorage.getItem('eoa-wiki-muted')==='true';
   a.volume=0.3;
+  a.currentTime=parseFloat(localStorage.getItem('eoa-wiki-time'))||0;
   function upd(){b.textContent=muted?'\u266C\u2009\u2715':'\u266B';b.title=muted?'Play music':'Mute music';}
   upd();
-  if(!muted){a.play().catch(function(){
-    document.addEventListener('click',function f(){a.play();document.removeEventListener('click',f);},{once:true});
+  setInterval(function(){if(!a.paused)localStorage.setItem('eoa-wiki-time',a.currentTime);},500);
+  window.addEventListener('beforeunload',function(){if(!a.paused)localStorage.setItem('eoa-wiki-time',a.currentTime);});
+  function resume(){a.currentTime=parseFloat(localStorage.getItem('eoa-wiki-time'))||0;return a.play();}
+  if(!muted){resume().catch(function(){
+    document.addEventListener('click',function f(){resume();document.removeEventListener('click',f);},{once:true});
   });}
-  b.addEventListener('click',function(){muted=!muted;localStorage.setItem('eoa-wiki-muted',muted);if(muted)a.pause();else a.play();upd();});
+  b.addEventListener('click',function(){muted=!muted;localStorage.setItem('eoa-wiki-muted',muted);if(muted)a.pause();else resume();upd();});
 })();
 </script>
 </body>
