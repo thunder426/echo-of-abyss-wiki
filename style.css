@@ -541,6 +541,31 @@ nav a.active { border-bottom: 2px solid var(--accent-void); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent-void-dim); }
 
+/* ---------- Music Toggle ---------- */
+.music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.music-toggle:hover {
+  border-color: var(--accent-void);
+  color: var(--text-primary);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.2);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .hero-banner h1 { font-size: 2rem; }
