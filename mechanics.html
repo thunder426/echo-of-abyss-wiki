@@ -433,6 +433,93 @@
     </div>
   </div>
 
+  <!-- CHAMPION SYSTEM -->
+  <div class="section" id="champions">
+    <h2 class="section-title">Champion System</h2>
+
+    <div class="card-grid">
+      <div class="info-box">
+        <h3 style="color:var(--accent-gold)">What are Champions?</h3>
+        <p>Every encounter has a unique <strong>champion unit</strong> that is auto-summoned for free when a specific fight condition is met. Champions are not played from the enemy's deck &mdash; they appear automatically when the encounter's signature mechanic reaches a climax moment.</p>
+        <br>
+        <ul>
+          <li><strong>Cost:</strong> 0 Essence (free summon)</li>
+          <li><strong>Max 1 per encounter</strong> &mdash; each fight has exactly one champion</li>
+          <li><strong>Effects:</strong> Aura-type or keyword-based only (no on-play effects)</li>
+          <li><strong>Death value:</strong> Killing a champion deals <strong>20% of enemy hero max HP</strong> as direct damage to the enemy hero</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3 style="color:var(--accent-gold)">Summon Conditions</h3>
+        <p>Each champion has a unique auto-summon condition tied to the encounter's theme. A progress tracker shows how close the champion is to appearing:</p>
+        <br>
+        <table class="data-table" style="margin-bottom:0">
+          <tr><td>&lt; 50%</td><td style="color:var(--text-muted)">White/grey, no animation</td></tr>
+          <tr><td>50&ndash;75%</td><td style="color:#fbbf24">Yellow with gentle pulse</td></tr>
+          <tr><td>75%+</td><td style="color:#f87171">Orange/red with urgent pulse</td></tr>
+          <tr><td>Trigger!</td><td style="color:var(--accent-gold)">Full-screen effect, champion slams onto board</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="section-subtitle">Player Champion</h3>
+    <div class="info-box">
+      <p><strong style="color:var(--accent-gold)">Nyx'ael, Void Sovereign</strong> &mdash; 500 ATK / 500 HP &middot; 5 Essence</p>
+      <p>Auto-summoned when 3 Void Imp Clan minions are on the battlefield. At the start of your turn, deal 200 damage to all enemy minions.</p>
+    </div>
+
+    <h3 class="section-subtitle">Enemy Champions (Acts 1&ndash;2)</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Encounter</th><th>Champion</th><th>Stats</th><th>Keywords</th><th>Summon Condition</th><th>Effect</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fight 1</td>
+          <td class="col-name" style="color:var(--accent-gold)">Rogue Imp Pack</td>
+          <td>300/400</td><td><span class="keyword-tag kw-swift">Swift</span></td>
+          <td>4 Rabid Imp attacks</td>
+          <td>Aura: All friendly Feral Imps +100 ATK</td>
+        </tr>
+        <tr>
+          <td>Fight 2</td>
+          <td class="col-name" style="color:var(--accent-gold)">Corrupted Broodlings</td>
+          <td>200/400</td><td>&mdash;</td>
+          <td>3 friendly minions died</td>
+          <td>On death: Summon a Void-Touched Imp</td>
+        </tr>
+        <tr>
+          <td>Fight 3</td>
+          <td class="col-name" style="color:var(--accent-gold)">Imp Matriarch</td>
+          <td>300/500</td><td><span class="keyword-tag kw-guard">Guard</span></td>
+          <td>2nd Pack Frenzy cast</td>
+          <td>Aura: Pack Frenzy also grants +200 HP to Feral Imps</td>
+        </tr>
+        <tr>
+          <td>Fight 4</td>
+          <td class="col-name" style="color:var(--accent-gold)">Abyss Cultist Patrol</td>
+          <td>300/300</td><td>&mdash;</td>
+          <td>4 corruption stacks consumed</td>
+          <td>Aura: Corruption instantly detonates on application</td>
+        </tr>
+        <tr>
+          <td>Fight 5</td>
+          <td class="col-name" style="color:var(--accent-gold)">Void Ritualist</td>
+          <td>200/300</td><td>&mdash;</td>
+          <td>First ritual sacrifice triggers</td>
+          <td>Aura: Rune placement costs 1 less Mana</td>
+        </tr>
+        <tr>
+          <td>Fight 6</td>
+          <td class="col-name" style="color:var(--accent-gold)">Corrupted Handler</td>
+          <td>300/300</td><td>&mdash;</td>
+          <td>3 void sparks created</td>
+          <td>Aura: Void Spark summon deals 200 damage to player hero</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- WIN/LOSS -->
   <div class="section" id="win-loss">
     <h2 class="section-title">Win &amp; Loss Conditions</h2>

@@ -39,6 +39,7 @@
           <div class="encounter-name">Fight 1: Rogue Imp Pack</div>
           <div class="encounter-hp">HP: 1800</div>
         </div>
+        <div class="encounter-portrait"><img src="assets/art/portraits/rogue_imp_pack_portrait.png" alt="Rogue Imp Pack" loading="lazy"></div>
       </div>
       <div class="encounter-story">&ldquo;The outer tunnels of the Imp Lair crawl with feral Void Imps freshly escaped from their cages. They are wild, disorganised &mdash; but their numbers are not to be underestimated.&rdquo;</div>
 
@@ -46,10 +47,10 @@
       <table class="data-table">
         <thead><tr><th>Card</th><th>Copies</th><th>Type</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="col-name">Rabid Imp</td><td>4</td><td>Minion</td><td>1E &middot; 200/100 &middot; Swift</td></tr>
-          <tr><td class="col-name">Brood Imp</td><td>3</td><td>Minion</td><td>2E &middot; 100/300 &middot; On death: summon 2 Void Sparks</td></tr>
+          <tr><td class="col-name">Rabid Imp</td><td>5</td><td>Minion</td><td>1E &middot; 200/100 &middot; Swift</td></tr>
           <tr><td class="col-name">Imp Brawler</td><td>3</td><td>Minion</td><td>2E &middot; 300/250</td></tr>
-          <tr><td class="col-name">Feral Surge</td><td>2</td><td>Spell</td><td>1M &middot; Target Feral Imp +300 ATK this turn</td></tr>
+          <tr><td class="col-name">Rogue Imp Elder</td><td>1</td><td>Minion</td><td>4E &middot; 300/500 &middot; Aura: all Feral Imps +100 ATK</td></tr>
+          <tr><td class="col-name">Feral Surge</td><td>3</td><td>Spell</td><td>1M &middot; Target Feral Imp +300 ATK</td></tr>
           <tr><td class="col-name">Void Screech</td><td>2</td><td>Spell</td><td>1M &middot; 250 hero dmg (350 if 3+ imps)</td></tr>
         </tbody>
       </table>
@@ -57,9 +58,14 @@
       <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
       <div class="info-box">
         <ul>
-          <li><strong>Feral Instinct:</strong> Each Feral Imp summoned gains &ldquo;Draw 1 card&rdquo; on death. Resets each enemy turn.</li>
-          <li><strong>Pack Instinct:</strong> Tracks board state; applies scaling bonuses based on Feral Imp count.</li>
+          <li><strong>Pack Instinct:</strong> Each Feral Imp on board gains +50 ATK per other Feral Imp (dynamic aura). 3 imps = each gets +100 ATK.</li>
         </ul>
+      </div>
+
+      <div class="champion-box">
+        <h4>Champion: Rogue Imp Pack</h4>
+        <div class="champion-stats"><span class="stat stat-atk">ATK 300</span><span class="stat stat-hp">HP 400</span><span class="keyword-tag kw-swift" style="margin-left:4px">Swift</span></div>
+        <div class="champion-desc">Summoned after 4 Rabid Imp attacks. Aura: All friendly Feral Imp minions gain +100 ATK.</div>
       </div>
     </div>
 
@@ -70,6 +76,7 @@
           <div class="encounter-name">Fight 2: Corrupted Broodlings</div>
           <div class="encounter-hp">HP: 2400</div>
         </div>
+        <div class="encounter-portrait"><img src="assets/art/portraits/corrupted_broodlings_portrait.png" alt="Corrupted Broodlings" loading="lazy"></div>
       </div>
       <div class="encounter-story">&ldquo;Deeper in, the air turns thick with void energy. The broodlings here have been touched by something ancient &mdash; their eyes glow with a hunger that wasn't there before.&rdquo;</div>
 
@@ -77,20 +84,26 @@
       <table class="data-table">
         <thead><tr><th>Card</th><th>Copies</th><th>Type</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="col-name">Void-Touched Imp</td><td>4</td><td>Minion</td><td>2E &middot; 200/300 &middot; On death: 100 AoE to all enemies</td></tr>
-          <tr><td class="col-name">Rabid Imp</td><td>4</td><td>Minion</td><td>1E &middot; 200/100 &middot; Swift</td></tr>
-          <tr><td class="col-name">Brood Imp</td><td>2</td><td>Minion</td><td>2E &middot; 100/300 &middot; On death: summon 2 Void Sparks</td></tr>
-          <tr><td class="col-name">Void Screech</td><td>1</td><td>Spell</td><td>1M &middot; 250 hero damage</td></tr>
-          <tr><td class="col-name">Pack Frenzy</td><td>2</td><td>Spell</td><td>3M &middot; All Feral Imps +250 ATK + Swift</td></tr>
+          <tr><td class="col-name">Void-Touched Imp</td><td>5</td><td>Minion</td><td>2E &middot; 200/300 &middot; On death: 100 AoE to all enemies</td></tr>
+          <tr><td class="col-name">Brood Imp</td><td>3</td><td>Minion</td><td>2E &middot; 100/300 &middot; On death: summon 2 Void Sparks</td></tr>
+          <tr><td class="col-name">Frenzied Imp</td><td>2</td><td>Minion</td><td>3E &middot; 300/300 &middot; On play: ping damage per Feral Imp</td></tr>
+          <tr><td class="col-name">Matriarch's Broodling</td><td>1</td><td>Minion</td><td>4E &middot; 200/500 &middot; Guard &middot; On death: summon Brood Imp</td></tr>
+          <tr><td class="col-name">Void Screech</td><td>2</td><td>Spell</td><td>1M &middot; 250 hero dmg (350 if 3+ imps)</td></tr>
+          <tr><td class="col-name">Feral Surge</td><td>1</td><td>Spell</td><td>1M &middot; Target Feral Imp +300 ATK</td></tr>
         </tbody>
       </table>
 
       <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
       <div class="info-box">
         <ul>
-          <li><strong>Feral Instinct:</strong> Draw on feral imp death.</li>
-          <li><strong>Corrupted Death:</strong> When an enemy minion dies, creates a damage loop through corrupted mechanics.</li>
+          <li><strong>Corrupted Death:</strong> When the player casts a spell, reduce the Essence cost of a random minion in the enemy's hand by 1.</li>
         </ul>
+      </div>
+
+      <div class="champion-box">
+        <h4>Champion: Corrupted Broodlings</h4>
+        <div class="champion-stats"><span class="stat stat-atk">ATK 200</span><span class="stat stat-hp">HP 400</span></div>
+        <div class="champion-desc">Summoned after 3 friendly minions have died. On death: Summon a Void-Touched Imp.</div>
       </div>
     </div>
 
@@ -99,8 +112,9 @@
       <div class="encounter-header">
         <div>
           <div class="encounter-name"><span class="badge badge-boss">BOSS</span> Fight 3: Imp Matriarch</div>
-          <div class="encounter-hp">HP: 3000</div>
+          <div class="encounter-hp">HP: 2600</div>
         </div>
+        <div class="encounter-portrait"><img src="assets/art/portraits/imp_matriarch_portrait.png" alt="Imp Matriarch" loading="lazy"></div>
       </div>
       <div class="encounter-story">&ldquo;At the heart of the lair, a monstrous Imp Matriarch holds court. She is the source of the corruption &mdash; ancient, cunning, and furious at the intrusion into her domain.&rdquo;</div>
 
@@ -108,29 +122,29 @@
       <table class="data-table">
         <thead><tr><th>Card</th><th>Copies</th><th>Type</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="col-name">Rabid Imp</td><td>3</td><td>Minion</td><td>1E &middot; 200/100 &middot; Swift</td></tr>
-          <tr><td class="col-name">Brood Imp</td><td>2</td><td>Minion</td><td>2E &middot; 100/300</td></tr>
-          <tr><td class="col-name">Imp Brawler</td><td>2</td><td>Minion</td><td>2E &middot; 300/250</td></tr>
-          <tr><td class="col-name">Void-Touched Imp</td><td>1</td><td>Minion</td><td>2E &middot; 200/300</td></tr>
-          <tr><td class="col-name">Rogue Imp Elder</td><td>1</td><td>Minion</td><td>4E &middot; 300/500 &middot; Aura: all Feral Imps +100 ATK</td></tr>
-          <tr><td class="col-name">Matriarch's Broodling</td><td>1</td><td>Minion</td><td>4E &middot; 200/500 &middot; Guard &middot; On death: summon Brood Imp</td></tr>
+          <tr><td class="col-name">Brood Call</td><td>6</td><td>Spell</td><td>2M &middot; Summon a random Feral Imp</td></tr>
           <tr><td class="col-name">Pack Frenzy</td><td>2</td><td>Spell</td><td>3M &middot; All Feral Imps +250 ATK + Swift</td></tr>
-          <tr><td class="col-name">Feral Surge</td><td>1</td><td>Spell</td><td>1M &middot; +300 ATK to a Feral Imp</td></tr>
-          <tr><td class="col-name">Void Screech</td><td>1</td><td>Spell</td><td>1M &middot; 250 hero damage</td></tr>
-          <tr><td class="col-name">Brood Call</td><td>1</td><td>Spell</td><td>2M &middot; Summon a random Feral Imp</td></tr>
+          <tr><td class="col-name">Feral Surge</td><td>2</td><td>Spell</td><td>1M &middot; Target Feral Imp +300 ATK</td></tr>
+          <tr><td class="col-name">Void Screech</td><td>2</td><td>Spell</td><td>1M &middot; 250 hero dmg (350 if 3+ imps)</td></tr>
         </tbody>
       </table>
 
       <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
       <div class="info-box">
         <ul>
-          <li><strong>Feral Instinct:</strong> Draw on feral imp death.</li>
-          <li><strong>Ancient Frenzy:</strong> Reduces Pack Frenzy cost by 1 Mana. Rogue Imp Elder gets boosted ATK aura. Special hand injection mechanic.</li>
+          <li><strong>Ancient Frenzy:</strong> Pack Frenzy costs 1 less Mana. When Pack Frenzy is cast, all Feral Imps also gain Lifedrain for the turn. Pack Frenzy is guaranteed in opening hand.</li>
         </ul>
       </div>
+
+      <div class="champion-box">
+        <h4>Champion: Imp Matriarch</h4>
+        <div class="champion-stats"><span class="stat stat-atk">ATK 300</span><span class="stat stat-hp">HP 500</span><span class="keyword-tag kw-guard" style="margin-left:4px">Guard</span></div>
+        <div class="champion-desc">Summoned on 2nd Pack Frenzy cast. Aura: Pack Frenzy also grants +200 HP to all Feral Imp minions.</div>
+      </div>
+
       <div class="info-box" style="margin-top:8px;border-color:var(--accent-blood)">
         <h3 style="color:var(--accent-blood)">Strategy</h3>
-        <p>Combo-focused: floods board with cheap imps &rarr; Rogue Imp Elder aura (+100 ATK to all Feral Imps) &rarr; swings with Pack Frenzy. Turn 5 is the danger window. Kill the Elder early to prevent the scaling.</p>
+        <p>Summoner boss: no minions in deck &mdash; all board presence comes from Brood Call summons. Floods board with random Feral Imps &rarr; Pack Frenzy burst (+250 ATK, Swift, Lifedrain). The champion adds +200 HP to all Feral Imps after 2nd Pack Frenzy, making them very hard to remove.</p>
       </div>
     </div>
   </div>
@@ -146,6 +160,7 @@
           <div class="encounter-name">Fight 4: Abyss Cultist Patrol</div>
           <div class="encounter-hp">HP: 2800</div>
         </div>
+        <div class="encounter-portrait"><img src="assets/art/portraits/abyss_cultist_patrol_portrait.png" alt="Abyss Cultist Patrol" loading="lazy"></div>
       </div>
       <div class="encounter-story">&ldquo;The Abyss Dungeon. Cultists who willingly surrendered themselves to the void patrol these stone corridors. They have given up their names, their faces &mdash; only devotion remains.&rdquo;</div>
 
@@ -153,12 +168,11 @@
       <table class="data-table">
         <thead><tr><th>Card</th><th>Copies</th><th>Type</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="col-name">Abyss Cultist</td><td>4</td><td>Minion</td><td>1E &middot; 100/300 &middot; On play: Corrupt random enemy</td></tr>
-          <tr><td class="col-name">Void Netter</td><td>1</td><td>Minion</td><td>2E &middot; 100/300 &middot; On play: 200 dmg to target</td></tr>
-          <tr><td class="col-name">Cult Fanatic</td><td>2</td><td>Minion</td><td>2E &middot; 300/300</td></tr>
+          <tr><td class="col-name">Abyss Cultist</td><td>5</td><td>Minion</td><td>1E &middot; 100/300 &middot; On play: Corrupt random enemy</td></tr>
           <tr><td class="col-name">Corruption Weaver</td><td>2</td><td>Minion</td><td>3E &middot; 100/400 &middot; On play: Corrupt all enemies</td></tr>
-          <tr><td class="col-name">Void Stalker</td><td>1</td><td>Minion</td><td>3E &middot; 300/200 &middot; Swift, Lifedrain</td></tr>
           <tr><td class="col-name">Spell Taxer</td><td>2</td><td>Minion</td><td>3E &middot; 250/300 &middot; On play: enemy spells +1M</td></tr>
+          <tr><td class="col-name">Roadside Drifter</td><td>2</td><td>Minion</td><td>2E &middot; 200/200</td></tr>
+          <tr><td class="col-name">Void Screech</td><td>4</td><td>Spell</td><td>1M &middot; 250 hero dmg (350 if 3+ imps)</td></tr>
           <tr><td class="col-name">Dark Command</td><td>2</td><td>Spell</td><td>1M &middot; All friendly Humans +100/+100</td></tr>
         </tbody>
       </table>
@@ -166,9 +180,15 @@
       <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
       <div class="info-box">
         <ul>
-          <li><strong>Feral Reinforcement:</strong> On first imp summon per turn, gain bonus effect. Resets each turn.</li>
-          <li><strong>Corrupt Authority:</strong> Human and Imp minions gain different benefits when summoned.</li>
+          <li><strong>Feral Reinforcement:</strong> First Human summoned each turn &rarr; enemy draws a random Feral Imp. Once per turn.</li>
+          <li><strong>Corrupt Authority:</strong> Each Human summoned applies 1 Corruption to a random player minion. Each Feral Imp summoned consumes all Corruption stacks and deals 100 damage per stack.</li>
         </ul>
+      </div>
+
+      <div class="champion-box">
+        <h4>Champion: Abyss Cultist Patrol</h4>
+        <div class="champion-stats"><span class="stat stat-atk">ATK 300</span><span class="stat stat-hp">HP 300</span></div>
+        <div class="champion-desc">Summoned after 4 corruption stacks consumed. Aura: Corruption applied to player minions instantly detonates.</div>
       </div>
     </div>
 
@@ -179,6 +199,7 @@
           <div class="encounter-name">Fight 5: Void Ritualist</div>
           <div class="encounter-hp">HP: 3400</div>
         </div>
+        <div class="encounter-portrait"><img src="assets/art/portraits/void_ritualist_portrait.png" alt="Void Ritualist" loading="lazy"></div>
       </div>
       <div class="encounter-story">&ldquo;A Void Ritualist performs an unending ceremony in the dungeon's depths. Runes of blood and shadow cover every wall. Whatever he is summoning, it must not be allowed to complete.&rdquo;</div>
 
@@ -186,10 +207,8 @@
       <table class="data-table">
         <thead><tr><th>Card</th><th>Copies</th><th>Type</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="col-name">Abyss Cultist</td><td>3</td><td>Minion</td><td>1E &middot; 100/300 &middot; Corruption</td></tr>
-          <tr><td class="col-name">Cult Fanatic</td><td>3</td><td>Minion</td><td>2E &middot; 300/300</td></tr>
-          <tr><td class="col-name">Corruption Weaver</td><td>2</td><td>Minion</td><td>3E &middot; 100/400 &middot; Mass Corruption</td></tr>
-          <tr><td class="col-name">Void Stalker</td><td>1</td><td>Minion</td><td>3E &middot; 300/200 &middot; Swift, Lifedrain</td></tr>
+          <tr><td class="col-name">Cult Fanatic</td><td>5</td><td>Minion</td><td>2E &middot; 300/300</td></tr>
+          <tr><td class="col-name">Rune Seeker</td><td>1</td><td>Minion</td><td>Draw rune support</td></tr>
           <tr><td class="col-name">Dominion Rune</td><td>2</td><td>Rune</td><td>2M &middot; All friendly Demons +100 ATK</td></tr>
           <tr><td class="col-name">Blood Rune</td><td>2</td><td>Rune</td><td>2M &middot; Heal 100 on friendly death</td></tr>
           <tr><td class="col-name">Dark Command</td><td>2</td><td>Spell</td><td>1M &middot; All Humans +100/+100</td></tr>
@@ -199,9 +218,15 @@
       <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
       <div class="info-box">
         <ul>
-          <li><strong>Feral Reinforcement:</strong> Imp caller mechanics.</li>
-          <li><strong>Ritual Sacrifice:</strong> Synergy effect on minion summoning.</li>
+          <li><strong>Feral Reinforcement:</strong> First Human summoned each turn &rarr; enemy draws a random Feral Imp. Once per turn.</li>
+          <li><strong>Ritual Sacrifice:</strong> When a Feral Imp is summoned while both Blood Rune and Dominion Rune are active &rarr; consume both runes + the imp, deal 400 damage (200&times;2) to player, and summon a 500/500 Void Demon.</li>
         </ul>
+      </div>
+
+      <div class="champion-box">
+        <h4>Champion: Void Ritualist</h4>
+        <div class="champion-stats"><span class="stat stat-atk">ATK 200</span><span class="stat stat-hp">HP 300</span></div>
+        <div class="champion-desc">Summoned when ritual sacrifice triggers. Aura: Rune placement costs 1 less Mana.</div>
       </div>
     </div>
 
@@ -212,6 +237,7 @@
           <div class="encounter-name"><span class="badge badge-boss">BOSS</span> Fight 6: Corrupted Handler</div>
           <div class="encounter-hp">HP: 4000</div>
         </div>
+        <div class="encounter-portrait"><img src="assets/art/portraits/corrupted_handler_portrait.png" alt="Corrupted Handler" loading="lazy"></div>
       </div>
       <div class="encounter-story">&ldquo;The Handler was once a warden of this dungeon. Now something else wears his shape. His eyes are empty voids. His commands come in a language that shouldn't exist.&rdquo;</div>
 
@@ -219,26 +245,39 @@
       <table class="data-table">
         <thead><tr><th>Card</th><th>Copies</th><th>Type</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="col-name">Abyss Cultist</td><td>3</td><td>Minion</td><td>1E &middot; 100/300 &middot; Corruption</td></tr>
-          <tr><td class="col-name">Cult Fanatic</td><td>3</td><td>Minion</td><td>2E &middot; 300/300</td></tr>
-          <tr><td class="col-name">Corruption Weaver</td><td>2</td><td>Minion</td><td>3E &middot; 100/400 &middot; Mass Corruption</td></tr>
-          <tr><td class="col-name">Soul Collector</td><td>1</td><td>Minion</td><td>5E &middot; 300/700 &middot; Destroy Corrupted enemy</td></tr>
+          <tr><td class="col-name">Abyss Cultist</td><td>1</td><td>Minion</td><td>1E &middot; 100/300 &middot; On play: Corrupt random enemy</td></tr>
+          <tr><td class="col-name">Cult Fanatic</td><td>2</td><td>Minion</td><td>2E &middot; 300/300</td></tr>
+          <tr><td class="col-name">Brood Imp</td><td>1</td><td>Minion</td><td>2E &middot; 100/300 &middot; On death: summon 2 Void Sparks</td></tr>
           <tr><td class="col-name">Void Stalker</td><td>2</td><td>Minion</td><td>3E &middot; 300/200 &middot; Swift, Lifedrain</td></tr>
-          <tr><td class="col-name">Spell Taxer</td><td>1</td><td>Minion</td><td>3E &middot; 250/300 &middot; Spell cost increase</td></tr>
-          <tr><td class="col-name">Dark Command</td><td>2</td><td>Spell</td><td>1M &middot; All Humans +100/+100</td></tr>
+          <tr><td class="col-name">Void Spawner</td><td>2</td><td>Minion</td><td>Void Spark generation</td></tr>
+          <tr><td class="col-name">Dark Command</td><td>1</td><td>Spell</td><td>1M &middot; All Humans +100/+100</td></tr>
+          <tr><td class="col-name">Void Screech</td><td>2</td><td>Spell</td><td>1M &middot; 250 hero dmg (350 if 3+ imps)</td></tr>
         </tbody>
       </table>
 
       <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
       <div class="info-box">
         <ul>
-          <li><strong>Feral Reinforcement:</strong> Imp summon mechanics.</li>
-          <li><strong>Void Unraveling:</strong> On minion death, transfers Void Sparks to friendly board. On minion summon, may spawn Void Sparks.</li>
+          <li><strong>Feral Reinforcement:</strong> First Human summoned each turn &rarr; enemy draws a random Feral Imp. Once per turn.</li>
+          <li><strong>Void Unraveling:</strong>
+            <ul>
+              <li>Human summoned &rarr; spawn a 100/100 Void Spark on enemy board</li>
+              <li>Feral Imp summoned &rarr; consume 1 Void Spark, grant +100/+100 to that imp</li>
+              <li>End of enemy turn &rarr; corrupt 1 random Void Spark and transfer it to player board (clogs player slots)</li>
+            </ul>
+          </li>
         </ul>
       </div>
+
+      <div class="champion-box">
+        <h4>Champion: Corrupted Handler</h4>
+        <div class="champion-stats"><span class="stat stat-atk">ATK 300</span><span class="stat stat-hp">HP 300</span></div>
+        <div class="champion-desc">Summoned after 3 void sparks created. Aura: Whenever a Void Spark is summoned, deal 200 damage to player hero.</div>
+      </div>
+
       <div class="info-box" style="margin-top:8px;border-color:var(--accent-blood)">
         <h3 style="color:var(--accent-blood)">Strategy</h3>
-        <p>Watch out for Soul Collector &mdash; it instantly destroys Corrupted minions (and the enemy applies Corruption to <em>your</em> board). Keep your key minions free of Corruption stacks, or they'll be executed. Void Unraveling creates cascading Void Spark generation.</p>
+        <p>The Void Unraveling loop is the core threat: Humans spawn Void Sparks, Imps consume them for buffs, and unclaimed Sparks get transferred to your board. The champion makes every new Spark deal 200 hero damage. Kill Void Spawners and clear Sparks before they pile up.</p>
       </div>
     </div>
   </div>
@@ -347,8 +386,23 @@
           <div class="encounter-hp">HP: 5000</div>
         </div>
       </div>
-      <div class="encounter-story">&ldquo;The Void Castle looms at the edge of existence. Void Scouts patrol its outer walls &mdash; swift, precise, and utterly loyal.&rdquo;</div>
-      <div class="info-box"><p>Straightforward encounter with Abyssal Brutes (Guard) and Void Bolts (direct damage). No special passives.</p></div>
+      <div class="encounter-story">&ldquo;The Void Castle looms at the edge of existence. Void Scouts patrol its outer walls &mdash; swift, precise, and utterly loyal. The Sovereign's inner sanctum is somewhere beyond.&rdquo;</div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Key Cards</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Wisp</strong> (x4), <strong>Void Shade</strong> (x3), <strong>Sovereign's Herald</strong> (x2) &mdash; Void Spirit minions</li>
+          <li><strong>Bastion Colossus</strong> &mdash; heavy Guard unit</li>
+        </ul>
+      </div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Might:</strong> All Void Spirit minions gain bonus stats.</li>
+          <li><strong>Void Precision:</strong> Spell damage is increased.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="encounter-card">
@@ -359,7 +413,22 @@
         </div>
       </div>
       <div class="encounter-story">&ldquo;A full Void Warband stands between you and the castle's keep. These are the Sovereign's chosen soldiers &mdash; hardened by centuries of conquest across dying worlds.&rdquo;</div>
-      <div class="info-box"><p>More Abyssal Brutes and direct damage. Scaled-up version of the Void Scout encounter.</p></div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Key Cards</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Wraith</strong> (x2) &mdash; upgraded Void Spirit unit</li>
+          <li>Full Void Spirit toolkit with <strong>Void Behemoth</strong> (x2) for board control</li>
+        </ul>
+      </div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Might:</strong> All Void Spirit minions gain bonus stats.</li>
+          <li><strong>Spirit Conscription:</strong> Fallen Void Spirits bolster the remaining forces.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="encounter-card">
@@ -370,7 +439,22 @@
         </div>
       </div>
       <div class="encounter-story">&ldquo;The Void Captain commands the castle's garrison. A veteran of a hundred conquests, she has never known defeat. She regards you with curiosity &mdash; a new species of prey.&rdquo;</div>
-      <div class="info-box"><p>Further scaling with additional Abyssal Plague copies for AoE + Corruption pressure.</p></div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Key Cards</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Throne's Command</strong> &mdash; powerful buff spell</li>
+          <li>Heavy Void Spirit lineup with <strong>Sovereign's Herald</strong> (x2)</li>
+        </ul>
+      </div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Might:</strong> All Void Spirit minions gain bonus stats.</li>
+          <li><strong>Captain's Orders:</strong> Coordinates Void Spirit attacks for increased effectiveness.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="encounter-card">
@@ -380,8 +464,23 @@
           <div class="encounter-hp">HP: 7000</div>
         </div>
       </div>
-      <div class="encounter-story">&ldquo;The Ritualist Prime is the Sovereign's high priest. He has spent his eternal life weaving void energy into a prison for the soul.&rdquo;</div>
-      <div class="info-box"><p>Increased Void Bolt count (3 copies) for heavy direct-damage focus.</p></div>
+      <div class="encounter-story">&ldquo;The Ritualist Prime is the Sovereign's high priest. He has spent his eternal life weaving void energy into a prison for the soul. He will try to do the same to you.&rdquo;</div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Key Cards</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Sovereign's Decree</strong> &mdash; powerful control spell</li>
+          <li><strong>Void Bolt</strong> (x2), <strong>Arcane Strike</strong> (x2) &mdash; heavy spell damage focus</li>
+        </ul>
+      </div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Might:</strong> All Void Spirit minions gain bonus stats.</li>
+          <li><strong>Dark Channeling:</strong> Spell-focused passive that enhances magic-based attacks.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="encounter-card">
@@ -391,8 +490,23 @@
           <div class="encounter-hp">HP: 7800</div>
         </div>
       </div>
-      <div class="encounter-story">&ldquo;The last guardian before the throne. The Void Champion was forged from pure abyss energy &mdash; no flesh, no weakness, no mercy.&rdquo;</div>
-      <div class="info-box"><p>Maximum scaling before the final boss. 3 Brutes, 3 Void Bolts, 2 Plagues.</p></div>
+      <div class="encounter-story">&ldquo;The last guardian before the throne. The Void Champion was forged from pure abyss energy &mdash; no flesh, no weakness, no mercy. Beyond him, the Sovereign waits.&rdquo;</div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Key Cards</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Revenant</strong> &mdash; elite Void Spirit unit</li>
+          <li>Maximum unit diversity: Wisps, Shades, Wraiths, Heralds, Behemoth, Bastion Colossus</li>
+        </ul>
+      </div>
+
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Might:</strong> All Void Spirit minions gain bonus stats.</li>
+          <li><strong>Champion Duel:</strong> The Void Champion demands a worthy challenge.</li>
+        </ul>
+      </div>
     </div>
 
     <!-- FINAL BOSS -->
@@ -409,15 +523,31 @@
       <table class="data-table">
         <thead><tr><th>Card</th><th>Copies</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="col-name">Abyssal Brute</td><td>4</td><td>4E &middot; 300/600 &middot; Guard</td></tr>
-          <tr><td class="col-name">Void Bolt</td><td>3</td><td>3M &middot; 500 Void Bolt to hero</td></tr>
-          <tr><td class="col-name">Abyssal Plague</td><td>2</td><td>2M &middot; Corruption + 100 AoE</td></tr>
+          <tr><td class="col-name">Void Wisp</td><td>2</td><td>Void Spirit scout</td></tr>
+          <tr><td class="col-name">Void Shade</td><td>2</td><td>Void Spirit fighter</td></tr>
+          <tr><td class="col-name">Void Wraith</td><td>1</td><td>Void Spirit elite</td></tr>
+          <tr><td class="col-name">Void Revenant</td><td>1</td><td>Void Spirit champion</td></tr>
+          <tr><td class="col-name">Sovereign's Herald</td><td>2</td><td>Void Spirit support</td></tr>
+          <tr><td class="col-name">Void Pulse</td><td>2</td><td>1M + 1 Spark &middot; Draw 3</td></tr>
+          <tr><td class="col-name">Phase Stalker</td><td>2</td><td>2E + 1 Spark &middot; 400/300 Swift</td></tr>
+          <tr><td class="col-name">Sovereign's Decree</td><td>1</td><td>Control spell</td></tr>
+          <tr><td class="col-name">Void Bolt</td><td>1</td><td>3M &middot; 500 Void Bolt to hero</td></tr>
+          <tr><td class="col-name">Bastion Colossus</td><td>1</td><td>Heavy Guard unit</td></tr>
         </tbody>
       </table>
 
+      <h4 style="margin-bottom:8px;color:var(--text-secondary)">Passives</h4>
+      <div class="info-box">
+        <ul>
+          <li><strong>Void Might:</strong> All Void Spirit minions gain bonus stats.</li>
+          <li><strong>Void Precision:</strong> Spell damage is increased.</li>
+          <li><strong>Dark Channeling:</strong> Enhanced magic-based attacks.</li>
+        </ul>
+      </div>
+
       <div class="info-box" style="margin-top:12px;border-color:var(--accent-blood)">
         <h3 style="color:var(--accent-blood)">Strategy</h3>
-        <p>The ultimate endurance test. 10000 HP with no special passives &mdash; pure stat check. The Sovereign stalls behind Guards while burning you down with Void Bolts. Your deck needs to be highly refined by this point: strong board presence, efficient removal, and enough reach to punch through 10000 HP.</p>
+        <p>The ultimate endurance test. 10000 HP with three stacking passives &mdash; Void Spirits are buffed by Void Might, spells hit harder from Void Precision and Dark Channeling. The Sovereign uses the full Void Spirit roster plus Void Rift tools. Your deck needs to be highly refined by this point: strong board presence, efficient removal, and enough reach to punch through 10000 HP.</p>
       </div>
     </div>
   </div>
@@ -430,21 +560,21 @@
         <tr><th>Fight</th><th>Act</th><th>Name</th><th>HP</th><th>Key Mechanic</th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>1</td><td class="col-name">Rogue Imp Pack</td><td>1800</td><td>Feral Imp swarm</td></tr>
-        <tr><td>2</td><td>1</td><td class="col-name">Corrupted Broodlings</td><td>2400</td><td>Death triggers + AoE</td></tr>
-        <tr style="background:rgba(220,38,38,0.05)"><td>3</td><td>1</td><td class="col-name">Imp Matriarch</td><td>3000</td><td>Pack Frenzy burst &middot; Boss</td></tr>
-        <tr><td>4</td><td>2</td><td class="col-name">Abyss Cultist Patrol</td><td>2800</td><td>Corruption + Human synergy</td></tr>
-        <tr><td>5</td><td>2</td><td class="col-name">Void Ritualist</td><td>3400</td><td>Rune auras</td></tr>
-        <tr style="background:rgba(220,38,38,0.05)"><td>6</td><td>2</td><td class="col-name">Corrupted Handler</td><td>4000</td><td>Soul Collector execute &middot; Boss</td></tr>
+        <tr><td>1</td><td>1</td><td class="col-name">Rogue Imp Pack</td><td>1800</td><td>Pack Instinct scaling swarm</td></tr>
+        <tr><td>2</td><td>1</td><td class="col-name">Corrupted Broodlings</td><td>2400</td><td>Death triggers + cost discount</td></tr>
+        <tr style="background:rgba(220,38,38,0.05)"><td>3</td><td>1</td><td class="col-name">Imp Matriarch</td><td>2600</td><td>Brood Call summoner + Pack Frenzy burst &middot; Boss</td></tr>
+        <tr><td>4</td><td>2</td><td class="col-name">Abyss Cultist Patrol</td><td>2800</td><td>Corruption build + Imp detonation</td></tr>
+        <tr><td>5</td><td>2</td><td class="col-name">Void Ritualist</td><td>3400</td><td>Ritual Sacrifice combo</td></tr>
+        <tr style="background:rgba(220,38,38,0.05)"><td>6</td><td>2</td><td class="col-name">Corrupted Handler</td><td>4000</td><td>Void Unraveling spark loop &middot; Boss</td></tr>
         <tr><td>7</td><td>3</td><td class="col-name">Rift Stalker</td><td>3800</td><td>Void Spark economy</td></tr>
         <tr><td>8</td><td>3</td><td class="col-name">Void Aberration</td><td>4600</td><td>Spark loops + detonation</td></tr>
         <tr style="background:rgba(220,38,38,0.05)"><td>9</td><td>3</td><td class="col-name">Void Herald</td><td>6500</td><td>Halved Spark costs + Mana denial &middot; Boss</td></tr>
-        <tr><td>10</td><td>4</td><td class="col-name">Void Scout</td><td>5000</td><td>Guards + direct damage</td></tr>
-        <tr><td>11</td><td>4</td><td class="col-name">Void Warband</td><td>5600</td><td>Scaled Guards</td></tr>
-        <tr><td>12</td><td>4</td><td class="col-name">Void Captain</td><td>6200</td><td>+ Corruption pressure</td></tr>
-        <tr><td>13</td><td>4</td><td class="col-name">Void Ritualist Prime</td><td>7000</td><td>Heavy Void Bolt spam</td></tr>
-        <tr><td>14</td><td>4</td><td class="col-name">Void Champion</td><td>7800</td><td>Max scaling pre-boss</td></tr>
-        <tr style="background:rgba(220,38,38,0.05)"><td>15</td><td>4</td><td class="col-name">Abyss Sovereign</td><td>10000</td><td>Endurance &middot; Final Boss</td></tr>
+        <tr><td>10</td><td>4</td><td class="col-name">Void Scout</td><td>5000</td><td>Void Might + Precision</td></tr>
+        <tr><td>11</td><td>4</td><td class="col-name">Void Warband</td><td>5600</td><td>Void Might + Spirit Conscription</td></tr>
+        <tr><td>12</td><td>4</td><td class="col-name">Void Captain</td><td>6200</td><td>Void Might + Captain's Orders</td></tr>
+        <tr><td>13</td><td>4</td><td class="col-name">Void Ritualist Prime</td><td>7000</td><td>Void Might + Dark Channeling</td></tr>
+        <tr><td>14</td><td>4</td><td class="col-name">Void Champion</td><td>7800</td><td>Void Might + Champion Duel</td></tr>
+        <tr style="background:rgba(220,38,38,0.05)"><td>15</td><td>4</td><td class="col-name">Abyss Sovereign</td><td>10000</td><td>Triple passive &middot; Final Boss</td></tr>
       </tbody>
     </table>
   </div>
